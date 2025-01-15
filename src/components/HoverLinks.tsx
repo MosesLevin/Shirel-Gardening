@@ -3,9 +3,10 @@ import Link from 'next/link'
 import React, { FC, ReactNode, useState } from 'react'
 import NavDropdown from './NavDropdown'
 
+// add prop of component to pass component to it for multiple dropdowns
 export default function HoverLinks() {
   return (
-    <div className="flex h-screen w-full justify-center px-3 py-12">
+    <div className="flex fixed top-0 h-screen w-full justify-center px-3 py-12">
       <HoverLink href="/" HoverContent={NavDropdown}>
         Content
       </HoverLink>
