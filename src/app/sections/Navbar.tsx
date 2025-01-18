@@ -155,7 +155,7 @@ export default function Navbar() {
       )}
 
       {/* Desktop Navbar */}
-      <nav className="hidden md:flex flex-row-reverse fixed top-0 w-full justify-center gap-8 px-3 py-6 bg-white shado z-50">
+      <nav className="hidden md:flex flex-row-reverse fixed top-0 w-full justify-center gap-8 px-3 py-6 bg-none shado z-50">
         <div className="flex">
           <Logo className="size-14 absolute ml-8 top-2" />
         </div>
