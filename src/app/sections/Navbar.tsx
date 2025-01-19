@@ -126,9 +126,10 @@ export default function Navbar() {
       )}
 
       {/* Desktop Navbar */}
-      {/* added conditional to have hide nav bar effect on scroll */}
+      {/* motion to have effect on load */}
       <nav
-        className={`hidden md:flex flex-row-reverse fixed top-0 w-full justify-center gap-8 px-3 py-6 bg-none shado z-50 transition-transform duration-500 ease-in-out ${
+        className={`hidden md:flex flex-row-reverse fixed top-0 w-full justify-center gap-8 px-3 py-6 bg-white shadow z-50 transition-transform duration-500 ease-out ${
+          // added conditional to have hide nav bar effect on scroll
           isVisible ? '-translate-y-0' : 'transform -translate-y-full'
         } `}
       >
