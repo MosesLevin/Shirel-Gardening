@@ -1,5 +1,5 @@
-import TextureBackground from '../../assets/texturebackground.avif'
-import WallTexture from '../../assets/walltexture.jpg'
+// import TextureBackground from '../../assets/texturebackground.avif'
+// import WallTexture from '../../assets/walltexture.jpg'
 import GrassTexture from '../../assets/grass.jpg'
 export default function Footer() {
   return (
