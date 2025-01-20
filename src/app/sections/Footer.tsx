@@ -10,6 +10,7 @@ export default function Footer() {
           <div className="size-32 bg-p1c4"></div>
           <div className="size-32 bg-p1c5"></div>
           <div className="size-32 bg-p1c6"></div>
+          <div className="size-32 bg-p1c7"></div>
         </div>
         <div className="flex gap-4">
           p2

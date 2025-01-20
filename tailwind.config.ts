@@ -30,6 +30,7 @@ export default {
         p1c4: '#85b666',
         p1c5: '#bad86b',
         p1c6: '#f9f871',
+        p1c7: '#395f53',
 
         p2c1: '#224E41',
         p2c2: '#99b0a8',
@@ -45,6 +46,15 @@ export default {
         title: 'var(--font-title)',
         dirt: 'var(--font-dirt)',
         bubbles: 'var(--font-bubbles)',
+      },
+      keyframes: {
+        slideBackground: {
+          '0%': { 'background-position': '200% 0, 0 0' },
+          '100%': { 'background-position': '-100% 0, 0 0' },
+        },
+      },
+      animation: {
+        slide: 'slideBackground 2s infinite',
       },
     },
   },

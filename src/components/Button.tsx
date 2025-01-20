@@ -11,7 +11,7 @@ export default function Button({ className, text }: ButtonProps) {
     <div>
       <button
         className={twMerge(
-          `text-white font-sans border-black border-2 px-2`,
+          `text-white text-center bg-p1c1 font-sans text-lg font-medium rounded px-7 py-3 hover:bg-p1c7 transition-colors hover:duration-300`,
           className
         )}
       >

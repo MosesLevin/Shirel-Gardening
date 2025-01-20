@@ -1,3 +1,4 @@
+'use client'
 import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
 
@@ -21,7 +22,13 @@ export default function Hero() {
             אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
             שונה
           </p>
-          <Button className="" text="לחץ פה" />
+          <div className="flex justify-center mt-10 gap-4">
+            <Button
+              className=" border-white/30  border-[1px] bg-transparent hover:bg-transparent hover:border-white transition-colors hover:duration-300"
+              text="לחץ פה"
+            />
+            <Button className="button-animation " text="לחץ פה" />
+          </div>
         </div>
       </div>
     </section>
