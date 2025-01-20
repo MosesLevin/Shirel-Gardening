@@ -62,26 +62,29 @@ export default function Navbar() {
     <nav>
       {/* Mobile Navbar */}
       <div
-        className="md:hidden fixed top-0 w-full bg-white shadow z-20"
+        className="md:hidden fixed top-4 left-4 w-full bg-none z-20"
         ref={menuRef}
       >
-        <button className="p-4 focus:outline-none" onClick={toggleMenu}>
-          <div className="relative w-6 h-6">
+        <button
+          className="p-3 rounded focus:outline-none bg-black"
+          onClick={toggleMenu}
+        >
+          <div className="relative w-6 h-6  ">
             {/* Top Hamburger Line */}
             <span
-              className={`absolute block h-0.5 mt-1 w-full bg-black transition-transform duration-300 ${
+              className={`absolute block h-0.5 mt-1 w-full bg-white  transition-transform duration-300 ${
                 isOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
               }`}
             ></span>
             {/* Middle Hamburger Line */}
             <span
-              className={`absolute block h-0.5 mt-1 w-full bg-black transition-opacity duration-300 ${
+              className={`absolute block h-0.5 mt-1 w-full bg-white transition-opacity duration-300 ${
                 isOpen ? 'opacity-0' : 'opacity-100 translate-y-1.5'
               }`}
             ></span>
             {/* Bottom Hamburger Line */}
             <span
-              className={`absolute block h-0.5 mt-1 w-full bg-black transition-transform duration-300 ${
+              className={`absolute block h-0.5 mt-1 w-full bg-white transition-transform duration-300 ${
                 isOpen ? '-rotate-45 translate-y-2' : 'translate-y-3'
               }`}
             ></span>
@@ -134,19 +137,36 @@ export default function Navbar() {
         } `}
       >
         <div className="flex">
-          <Logo className="size-14 absolute ml-8 top-2" />
+          <Logo className="size-14 absolute ml-8 top-2 text-white" />
         </div>
         <div className="flex gap-8">
-          <DesktopNavHoverLink href="/" HoverContent={NavDropdown}>
+          <DesktopNavHoverLink
+            href="/"
+            HoverContent={NavDropdown}
+            linkClassName="text-white font-sans font-normal text-xl"
+          >
             גינון בר קיימא
           </DesktopNavHoverLink>
-          <DesktopNavHoverLink href="/" HoverContent={NavDropdown}>
+          <DesktopNavHoverLink
+            href="/"
+            HoverContent={NavDropdown}
+            linkClassName="text-white font-sans font-normal text-xl"
+          >
             גינון
           </DesktopNavHoverLink>
-          <DesktopNavHoverLink href="/" HoverContent={NavDropdown}>
+          <DesktopNavHoverLink
+            href="/"
+            HoverContent={NavDropdown}
+            linkClassName="text-white font-sans font-normal text-xl"
+          >
             ▼google
           </DesktopNavHoverLink>
-          <DesktopNavHoverLink href="/">אודות</DesktopNavHoverLink>
+          <DesktopNavHoverLink
+            href="/"
+            linkClassName="text-white font-sans font-normal text-xl"
+          >
+            אודות
+          </DesktopNavHoverLink>
         </div>
         {/* Overlay to Blur Background */}
         {isOpen && (

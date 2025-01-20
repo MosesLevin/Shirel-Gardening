@@ -20,7 +20,9 @@ export default function Footer() {
           <div className="size-32 bg-p2c5"></div>
         </div>
         <div className="p-8 m-4 rounded-lg shadow-lg max-w-screen-lg mx-auto ">
-          <h1 className="text-4xl font-bold mb-4 text-center">ברוכים הבאים</h1>
+          <h1 className="text-4xl font-bold font-sans mb-4 text-center">
+            ברוכים הבאים
+          </h1>
           <p className="text-xl mb-4">
             ב החופשית בהיסטוריה עוד. אל בהשחתה טכניים היא. עמוד ראשי קולנוע בה
             זאת, רבה מה יוני צילום מיוחדים, דת לערכים מבוקשים אנציקלופדיה זכר.

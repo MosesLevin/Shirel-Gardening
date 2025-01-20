@@ -42,6 +42,9 @@ export default {
       fontFamily: {
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
+        title: 'var(--font-title)',
+        dirt: 'var(--font-dirt)',
+        bubbles: 'var(--font-bubbles)',
       },
     },
   },

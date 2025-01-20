@@ -1,4 +1,5 @@
 import HeroImage from '@/assets/plant-roots.jpg'
+import Button from '@/components/Button'
 
 export default function Hero() {
   return (
@@ -8,11 +9,19 @@ export default function Hero() {
           className="absolute inset-0 -z-50  bg-center bg-cover bg-no-repeat -bottom-36 md:-bottom-4"
           style={{ backgroundImage: `url(${HeroImage.src})` }}
         ></div>
-        <div className="absolute inset-0 -z-40 bg-black bg-opacity-70"></div>
+        <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 -bottom-36 md:-bottom-4"></div>
       </div>
-      <div className="mx-auto min-h-screen max-w-7xl h-full bg-blue-400/50  ">
-        <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-          <p className="text-red-500">Hero Content</p>
+      <div className=" min-h-screen max-w-7xl h-full">
+        <div className="absolute w-9/12 md:w- -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
+          <h1 className="text-5xl md:text-7xl font-sans font-semibold text-white ">
+            גינון בר קיימא מקצועי
+          </h1>
+          <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-base">
+            בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה
+            אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
+            שונה
+          </p>
+          <Button className="" text="לחץ פה" />
         </div>
       </div>
     </section>
