@@ -58,7 +58,7 @@ export default function MobileNavDropdown({
       {/* motion div for */}
       {DropdownComponent && (
         <div
-          className={`overflow-hidden transition-all duration-500 ${
+          className={`overflow-hidden transition-all duration-300 ${
             isDropdownOpen ? 'max-h-96' : 'max-h-0'
           }`}
         >

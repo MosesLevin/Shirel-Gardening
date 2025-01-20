@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${calistoga.variable} antialiased`}>
+      <body
+        className={`bg-bg1 ${inter.variable} ${calistoga.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
