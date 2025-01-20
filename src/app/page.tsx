@@ -1,5 +1,5 @@
 import Navbar from './sections/Navbar'
-// import Hero from './sections/Hero'
+import Hero from './sections/Hero'
 // import Timeline from './sections/Timeline'
 // import Services from './sections/Services'
 // import About from './sections/About'
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      {/* <Hero />
-      <Timeline />
+      <Hero />
+      {/* <Timeline />
       <Services />
       <About />
       <Portfolio />

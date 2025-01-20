@@ -1,7 +1,18 @@
 import type { Metadata } from 'next'
-import { Calistoga, Rubik } from 'next/font/google'
+import { Calistoga, Rubik, Rubik_Bubbles, Rubik_Dirt } from 'next/font/google'
 import './globals.css'
 
+const rubikBubbles = Rubik_Bubbles({
+  weight: '400',
+  subsets: ['latin'],
+  variable: '--font-bubbles',
+})
+
+const rubikDirt = Rubik_Dirt({
+  subsets: ['latin'],
+  variable: '--font-dirt',
+  weight: '400',
+})
 const inter = Rubik({ subsets: ['latin'], variable: '--font-sans' })
 const calistoga = Calistoga({
   subsets: ['latin'],
@@ -21,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${calistoga.variable} antialiased`}>
+      <body
+        className={`bg-bg1 ${inter.variable} ${calistoga.variable} ${rubikBubbles.variable} ${rubikDirt.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
