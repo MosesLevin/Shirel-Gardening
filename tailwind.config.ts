@@ -47,14 +47,14 @@ export default {
         dirt: 'var(--font-dirt)',
         bubbles: 'var(--font-bubbles)',
       },
+      animation: {
+        randomButton: 'animateRandomButton 2s reverse infinite',
+      },
       keyframes: {
-        slideBackground: {
+        animateRandomButton: {
           '0%': { 'background-position': '200% 0, 0 0' },
           '100%': { 'background-position': '-100% 0, 0 0' },
         },
-      },
-      animation: {
-        slide: 'slideBackground 2s infinite',
       },
     },
   },
