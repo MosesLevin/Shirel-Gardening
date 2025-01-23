@@ -1,3 +1,92 @@
+// 'use client'
+// import React, { useRef, useState, useEffect } from 'react'
+// import { motion } from 'framer-motion'
+
+// interface SectionType {
+//   id: number
+//   label: string
+// }
+
+// const sections: SectionType[] = [
+//   { id: 1, label: 'Introduction' },
+//   { id: 2, label: 'Features' },
+//   { id: 3, label: 'Pricing' },
+//   { id: 4, label: 'Contact' },
+// ]
+
+// const AnimatedTimeline: React.FC = () => {
+//   const [currentSection, setCurrentSection] = useState<number>(0)
+//   const containerRef = useRef<HTMLDivElement>(null)
+
+//   useEffect(() => {
+//     const handleIntersection = (entries: IntersectionObserverEntry[]) => {
+//       entries.forEach((entry) => {
+//         if (entry.isIntersecting) {
+//           const index = parseInt(entry.target.getAttribute('data-index')!, 10)
+//           setCurrentSection(index + 1)
+//         }
+//       })
+//     }
+
+//     const observer = new IntersectionObserver(handleIntersection, {
+//       threshold: 0.5,
+//     })
+
+//     const elements = containerRef.current?.querySelectorAll('.section') ?? []
+//     elements.forEach((element) => observer.observe(element))
+
+//     return () => observer.disconnect()
+//   }, [])
+
+//   const lineHeights = [0, 0.33, 0.66, 1]
+//   const lineHeight = lineHeights[currentSection]
+
+//   return (
+//     <div ref={containerRef} className="relative h-screen">
+//       {/* Animated Line */}
+//       <motion.div
+//         style={{ transformOrigin: 'top' }}
+//         animate={{ scaleY: lineHeight }}
+//         transition={{ duration: 0.5 }}
+//         className="bg-gradient-to-b from-red-400 to-red-300 absolute left-8 w-1 h-full"
+//       />
+
+//       {/* Breakpoints */}
+//       {sections.map((section, index) => (
+//         <div
+//           key={section.id}
+//           className="absolute left-8"
+//           style={{ top: `${(index / (sections.length - 1)) * 100}%` }}
+//         >
+//           <div className="flex items-center">
+//             <motion.div
+//               animate={{ scale: currentSection >= index + 1 ? 1 : 0 }}
+//               transition={{ duration: 0.5 }}
+//               className="w-4 h-4 bg-white border-2 border-red-400 rounded-full"
+//             />
+//             <div className="ml-4 text-gray-800">{section.label}</div>
+//           </div>
+//         </div>
+//       ))}
+
+//       {/* Sections */}
+//       <div className="ml-16">
+//         {sections.map((section, index) => (
+//           <div
+//             key={section.id}
+//             className="section h-1/4 flex items-center justify-center border-b border-gray-300"
+//             data-index={index}
+//           >
+//             <h2 className="text-2xl">{section.label} Section</h2>
+//           </div>
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// export default AnimatedTimeline
+
 // MY COMPONENT
 'use client'
 import { useRef, useEffect, useState } from 'react'
