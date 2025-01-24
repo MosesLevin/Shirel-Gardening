@@ -1,7 +1,8 @@
 'use client'
 import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
-import HighlightedText from '@/components/HighlightedText'
+import TextEffect from '@/components/TextEffect'
+import UnderlinedText from '@/components/UnderlineText'
 
 export default function Hero() {
   return (
@@ -19,14 +20,26 @@ export default function Hero() {
             <div className="text-5xl md:text-7xl font-sans font-semibold text-white  mb-40">
               גינון בר קיימא מקצועי
             </div>
-            <HighlightedText
-              text={'גינון בר-קיימא מקצועי'}
-              highlightWord={'בר-קיימא'}
-              className="text-5xl md:text-7xl font-sans font-semibold text-white  "
-              highlightClassName="bg-p1c1"
-            />
+            <h1>
+              <TextEffect
+                text="This is an SEO-friendly Title"
+                highlightWord="SEO-friendly"
+                underlineWord="Title"
+                highlight
+                underline
+                className="text-4xl font-bold"
+                textClassName="text-gray-900"
+                highlightClassName="bg-yellow-300 text-black"
+                underlineClassName="h-[2px] text-red-500"
+              />
+            </h1>
           </div>
-
+          <UnderlinedText
+            text="Highlight this special word in the text."
+            underlinedWord="special"
+            className="text-lg font-medium"
+            underlineClassName="h-[2px] text-blue-500"
+          />
           <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-base">
             בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה
             אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
