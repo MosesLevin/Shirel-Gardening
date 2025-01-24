@@ -25,52 +25,50 @@ const TextEffect: React.FC<TextEffectProps> = ({
   highlight = false,
   underline = false,
 }) => {
-  // Function to wrap matched words with appropriate styling
-  const wrapText = (part: string): string => {
-    const isHighlight =
-      highlight &&
-      highlightWord &&
-      part.toLowerCase() === highlightWord.toLowerCase()
-    const isUnderline =
-      underline &&
-      underlineWord &&
-      part.toLowerCase() === underlineWord.toLowerCase()
+  // Split the text into parts based on highlightWord and underlineWord
+  const highlightRegex = highlightWord
+    ? new RegExp(`(${highlightWord})`, 'gi')
+    : null
+  const underlineRegex = underlineWord
+    ? new RegExp(`(${underlineWord})`, 'gi')
+    : null
 
-    let wrappedText = part
-
-    // Apply highlight styling
-    if (isHighlight) {
-      wrappedText = `<span class="${highlightClassName}">${wrappedText}</span>`
-    }
-
-    // Apply underline styling
-    if (isUnderline) {
-      wrappedText = `
-        <span class="relative inline-block">
-          ${wrappedText}
-          <span class="${underlineClassName}" style="position:absolute; left:0; right:0; bottom:-4px; display:block;">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-full h-auto">
-              ${UnderlineSvg}
-            </svg>
-          </span>
-        </span>
-      `
-    }
-
-    return wrappedText
-  }
-
-  // Process the text by splitting and wrapping matched parts
-  const processedText = text
-    .split(new RegExp(`(${highlightWord}|${underlineWord})`, 'gi'))
-    .map((part) => (highlightWord || underlineWord ? wrapText(part) : part))
-    .join('')
+  const parts = text.split(
+    new RegExp(`(${highlightWord}|${underlineWord})`, 'gi')
+  )
 
   return (
-    <span
-      className={twMerge('relative', className, textClassName)}
-      dangerouslySetInnerHTML={{ __html: processedText }}
-    />
+    <span className={twMerge('relative', className)}>
+      {parts.map((part, index) => {
+        const isHighlight =
+          highlight && highlightRegex && highlightRegex.test(part.toLowerCase())
+        const isUnderline =
+          underline && underlineRegex && underlineRegex.test(part.toLowerCase())
+
+        return (
+          <span
+            key={index}
+            className={twMerge(
+              textClassName, // Applies to the whole text
+              isHighlight ? twMerge('rounded', highlightClassName) : '',
+              isUnderline ? 'relative' : ''
+            )}
+          >
+            {part}
+            {isUnderline && (
+              <span
+                className={twMerge(
+                  'absolute left-0 right-0 bottom-[-4px] block',
+                  underlineClassName
+                )}
+              >
+                <UnderlineSvg className="w-full h-auto" />
+              </span>
+            )}
+          </span>
+        )
+      })}
+    </span>
   )
 }
 
