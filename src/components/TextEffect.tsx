@@ -62,7 +62,7 @@ const TextEffect: React.FC<TextEffectProps> = ({
                   underlineClassName
                 )}
               >
-                <UnderlineSvg className="w-full h-auto" />
+                <UnderlineSvg className="w-full h-auto aria-hidden:*" />
               </span>
             )}
           </span>
