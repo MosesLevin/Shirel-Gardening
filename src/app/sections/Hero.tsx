@@ -2,7 +2,6 @@
 import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
 
-// import TextEffect from '@/components/TextEffect'
 // import UnderlinedText from '@/components/UnderlineText'
 
 export default function Hero() {
@@ -28,7 +27,7 @@ export default function Hero() {
                 highlightClassName="bg-p1c1"
                 underline
                 underlineWord="מקצועי"
-                underlineClassName="h-[2px] text-red-500"
+                underlineClassName="h-[2px] text-yellow-300"
               />
             </h1> */}
             <h1 className="text-7xl font-bold">
