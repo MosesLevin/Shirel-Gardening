@@ -21,9 +21,10 @@ export default function Footer() {
           <div className="size-32 bg-p2c5"></div>
         </div>
         <div className="p-8 m-4 rounded-lg shadow-lg max-w-screen-lg mx-auto ">
+          <span className="underline-with-svg text-black">HELLO</span>
+
           <h1 className="text-4xl font-bold font-sans mb-4 text-center ">
             ברוכים הבאים
-            <span className="underline-with-svg">HELLO</span>
           </h1>
           <p className="text-xl mb-4">
             ב החופשית בהיסטוריה עוד. אל בהשחתה טכניים היא. עמוד ראשי קולנוע בה
