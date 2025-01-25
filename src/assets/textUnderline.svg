@@ -1,9 +1,10 @@
 
 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
  width="300.000000pt" height="24.000000pt" viewBox="0 0 300.000000 24.000000"
  preserveAspectRatio="xMidYMid meet">
 <g transform="translate(0.000000,24.000000) scale(0.100000,-0.100000)"
-fill="#000000" stroke="none">
+fill="currentColor" stroke="none">
 <path d="M1270 213 c-357 -9 -744 -40 -1035 -82 -195 -29 -203 -31 -181 -43
 11 -6 48 -7 90 -4 39 4 184 9 321 12 138 2 282 7 320 12 39 4 147 6 240 5 578
 -6 682 -6 790 2 171 14 540 7 830 -14 63 -5 114 -5 120 0 5 5 27 9 50 10 56 0
