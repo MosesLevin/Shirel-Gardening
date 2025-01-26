@@ -36,7 +36,7 @@ export const DesktopNavHoverLink: FC<DesktopNavHoverLinkProps> = ({
       {/* have a link with name of Children (text in navbar) and if we have Content show it transform it from scale0 to scale1 and show it beneath it in a div */}
       <Link
         href={href}
-        className={`relative text-gray-800 hover:text-lime-800 transition duration-200 ${linkClassName}`}
+        className={`relative text-gray-800 hover:text-p1c5/80 transition duration-200 ${linkClassName}`}
         style={{ direction: 'ltr', unicodeBidi: '-moz-initial' }}
       >
         {children}
@@ -44,7 +44,7 @@ export const DesktopNavHoverLink: FC<DesktopNavHoverLinkProps> = ({
           style={{
             transform: showHoverContent ? 'scaleX(1)' : 'scaleX(0)',
           }}
-          className="absolute -bottom-2 left-0 right-0 h-1 origin-right rounded-full bg-lime-400 transition-transform duration-200 ease-out"
+          className="absolute -bottom-2 left-0 right-0 h-1 origin-right rounded-full bg-p1c5 transition-transform duration-200 ease-out"
         />
       </Link>
       {/* for the exit animation to work we need to animate presence incase we re-trigger to show during exit animation */}

@@ -31,6 +31,7 @@ export default {
         p1c5: '#bad86b',
         p1c6: '#f9f871',
         p1c7: '#395f53',
+        p1c8: '#dcc624',
 
         p2c1: '#224E41',
         p2c2: '#99b0a8',

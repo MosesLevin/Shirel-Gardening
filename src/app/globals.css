@@ -29,11 +29,12 @@
     @apply relative; /* Needed to position the SVG */
   }
   .underline-with-svg::after {
-    @apply absolute left-0 right-0 top-full block h-full;
+    @apply absolute left-0 right-0 top-full block h-full w-full;
     content: ''; /* Placeholder for pseudo-element */
     background-image: url('../assets/textUnderline.svg?v=1.0');
     background-size: contain;
     background-repeat: no-repeat;
+    z-index: -1;
   }
 }
 
