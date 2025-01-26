@@ -17,7 +17,7 @@ export default function Hero() {
       <div className=" min-h-screen max-w-7xl h-full">
         <div className="absolute w-9/12 md:w- -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
           <div>
-            <h1 className="text-7xl font-bold font-sans text-white">
+            <h1 className="text-7xl font-bold font-sans text-white z-10">
               <span className="">גינון </span>
               <span className="bg-p1c1 rounded ">בר קיימא</span>
               <span className="underline-with-svg"> מקצועי</span>

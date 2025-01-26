@@ -19,12 +19,7 @@
     dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] 
     before:bg-[length:250%_250%,100%_100%] before:animate-randomButton before:bg-no-repeat transform duration-500 ease-in-out;
   }
-  .highlightText {
-    @apply bg-p1c1 text-white;
-  }
-  .highlightText {
-    @apply bg-p1c1 text-white;
-  }
+
   .underline-with-svg {
     @apply relative; /* Needed to position the SVG */
   }
