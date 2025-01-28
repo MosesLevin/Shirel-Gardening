@@ -1,41 +1,55 @@
 import React from 'react'
 import Image from 'next/image'
 import tree from '../../assets/tree2.jpg'
+import TestIcon from '@/assets/SVGs/icons/icon.svg'
 import SectionHeader from '@/components/SectionHeader'
 
-const services = [
+type interfaceServices = {
+  title: string
+  description: string
+  background: string
+  icon: React.ReactNode
+}
+// "Stack" or toolbox - all could be pulled from a database if larger projectand not hard coded
+const services: interfaceServices[] = [
   {
     title: 'שירות 1',
     description: 'אלו פרטי השירות המוצע מס 1.',
-    background:
-      'https://images.pexels.com/photos/129733/pexels-photo-129733.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    background: '',
+    icon: <TestIcon className="size-4" />,
   },
   {
     title: 'שירות 2',
     description: 'אלו פרטי השירות המוצע מס 2.',
-    background: '/path/to/bg2.jpg',
+    background: '',
+    icon: <TestIcon />,
   },
   {
     title: 'שירות 3',
     description: 'אלו פרטי השירות המוצע מס 3.',
-    background: '/path/to/bg3.jpg',
+    background: '',
+    icon: <TestIcon />,
   },
   {
     title: 'שירות 4',
     description: 'אלו פרטי השירות המוצע מס 4.',
-    background: '/path/to/bg4.jpg',
+    background: '',
+    icon: <TestIcon />,
   },
   {
     title: 'שירות 5',
     description: 'אלו פרטי השירות המוצע מס 5.',
     background: '/path/to/bg5.jpg',
+    icon: <TestIcon />,
   },
   {
     title: 'שירות 6',
     description: 'אלו פרטי השירות המוצע מס 6.',
     background: '/path/to/bg6.jpg',
+    icon: <TestIcon />,
   },
 ]
+
 const Services = () => {
   return (
     <div className="container mt-36 md:mt-4">
@@ -51,28 +65,29 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative overflow-hidden rounded-lg bg-cover bg-center border-2 border-black/50 p-4 group md:hover:scale-105 transition-transform duration-200 text-center"
+              className="relative overflow-hidden md:rounded-lg p-4 group md:hover:scale-[105%] md:hover:shadow-lg transition-transform duration-200 text-center"
             >
-              {/* Background Image with hover effect */}
+              {/* Background Image (always visible) */}
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-0 -z-10 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 bg-cover bg-center opacity-100"
                 style={{ backgroundImage: `url(${service.background})` }}
               ></div>
 
-              {/* Overlay for initial background */}
-              <div className="absolute inset-0 bg-gray-200 opacity-30 -z-10 group-hover:opacity-0 transition-opacity duration-300"></div>
-
-              <h3 className="text-xl font-semibold text-black ">
-                {service.title}
-              </h3>
-              <p className="mt-2 text-gray-900 opacity-100 md:opacity-0 md:translate-y-3 transition-all duration-300 md:group-hover:opacity-100 md:group-hover:translate-y-0 my-12">
+              {/* Content */}
+              <div className="md:flex items-center justify-between relative z-10">
+                <div className="ml-4">{service.icon}</div>
+                <h3 className="text-xl font-semibold text-black md:inline-flex">
+                  {service.title}
+                </h3>
+              </div>
+              <p className="mt-2 text-gray-900 my-12 relative z-10 md:text-end md:w-5/6 ml-auto">
                 {service.description}
               </p>
             </div>
           ))}
         </div>
         {/* Right Section (Image on Desktop, Top on Mobile) */}
-        <div className="">
+        <div className="md:w-1/2">
           <Image
             src={tree}
             alt="Services Image"
