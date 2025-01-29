@@ -2,7 +2,7 @@ import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 // import Timeline from './sections/Timeline'
 import Services from './sections/Services'
-// import About from './sections/About'
+import About from './sections/About'
 // import Portfolio from './sections/Portfolio'
 // import Blog from './sections/Blog'
 // import Faq from './sections/Faq'
@@ -14,8 +14,8 @@ export default function Home() {
       <Hero />
       {/* <Timeline /> */}
       <Services />
-      {/* <About />
-      <Portfolio />
+      <About />
+      {/* <Portfolio />
       <Blog />
       <Faq /> */}
       <Footer />

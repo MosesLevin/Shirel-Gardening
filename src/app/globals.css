@@ -19,6 +19,11 @@
     dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] 
     before:bg-[length:250%_250%,100%_100%] before:animate-randomButton before:bg-no-repeat transform duration-500 ease-in-out;
   }
+  .glow-effect {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+      0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+    transition: text-shadow 0.5s ease-in-out;
+  }
 
   .underline-with-svg {
     @apply relative; /* Needed to position the SVG */
