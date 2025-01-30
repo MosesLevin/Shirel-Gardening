@@ -4,7 +4,7 @@ import Image from 'next/image'
 import tree from '../../assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
 import SectionHeader from '@/components/SectionHeader'
-import IconGradient from '@/components/IconGradient'
+// import IconGradient from '@/components/IconGradient'
 import { motion } from 'framer-motion'
 
 type interfaceServices = {
@@ -20,45 +20,49 @@ const services: interfaceServices[] = [
     description: 'אלו פרטי השירות המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <IconGradient component={TestIcon} size="size-8" />,
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 2',
     description: 'אלו פרטי השירות המוצע מס 2.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <IconGradient component={TestIcon} size="size-8" />,
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 3',
     description: 'אלו פרטי השירות המוצע מס 3.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <TestIcon className="size-6" />,
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 4',
     description: 'אלו פרטי השירות המוצע מס 4.',
-    background: '',
-    icon: <TestIcon className="size-6" />,
+    background:
+      'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 5',
     description: 'אלו פרטי השירות המוצע מס 5.',
-    background: '/path/to/bg5.jpg',
-    icon: <TestIcon className="size-6" />,
+    background:
+      'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 6',
     description: 'אלו פרטי השירות המוצע מס 6.',
-    background: '/path/to/bg6.jpg',
-    icon: <TestIcon className="size-6" />,
+    background:
+      'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
+    icon: <TestIcon className="size-8 text-p1c4" />,
   },
 ]
 
 const Services = () => {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
-  const handleAnimationEnd = () => {
+
+  const handleAnimationComplete = () => {
     console.log('Animation ended')
     setIsAnimationComplete(true)
   }
@@ -73,35 +77,46 @@ const Services = () => {
       />
       <div className="flex flex-col md:flex-row w-full p-8 gap-8 font-sans">
         {/* Left Section (Services Cards) */}
-        <div className="w-full md:w-3/4 grid sm:grid-cols-1 md:grid-cols-2 gap-2 ">
+        <div className="w-full md:w-3/4 grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 ">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="relative md:rounded-lg p-4 group text-center transition-all duration-200 md:hover:transform md:hover:translate-y-[-5px] md:shadow-lg "
-              initial={{ opacity: 0, transform: 'translateX(100px)' }}
-              whileInView={{ opacity: 1, transform: 'translateX(0px)' }}
+              className=""
+              initial={{ opacity: 0, x: 100 }} // Using 'x' instead of 'transform'
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', delay: 0.1 }}
               viewport={{ amount: 'all', once: true, margin: '100px' }}
-              onAnimationEnd={handleAnimationEnd}
+              onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
-              <div className="md:flex items-center md:justify-between justify-center">
-                <div className="bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 mb-6 md:mb-0">
-                  {service.icon}
+              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200 transform translateZ(0) overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 ">
+                {' '}
+                {service.background && (
+                  <div
+                    className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
+                    style={{ backgroundImage: `url(${service.background})` }}
+                  />
+                )}
+                <div className="md:flex items-center md:justify-between justify-center w-1/2  md:w-full translate-x-1/2 md:translate-x-0">
+                  <div className="bg-p1c1 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
+                    {service.icon}
+                  </div>
+                  <div>
+                    <h3
+                      className={`text-xl font-semibold text-black md:inline-flex my-4 ${
+                        isAnimationComplete
+                          ? ' md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent '
+                          : ''
+                      }`}
+                    >
+                      {service.title}
+                    </h3>
+                  </div>
                 </div>
-                <div>
-                  <h3
-                    className={`text-xl font-semibold text-black md:inline-flex my-4 mt-8 ${
-                      isAnimationComplete ? 'underline-with-svg' : ''
-                    }`}
-                  >
-                    {service.title}
-                  </h3>
-                </div>
+                <p className="mt-2 text-gray-900 my-12 relative z-10 md:text-end md:w-5/6 ml-auto">
+                  {service.description}
+                </p>
               </div>
-              <p className="mt-2 text-gray-900 my-12 relative z-10 md:text-end md:w-5/6 ml-auto">
-                {service.description}
-              </p>
             </motion.div>
           ))}
         </div>
