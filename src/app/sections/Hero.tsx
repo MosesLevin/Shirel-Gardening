@@ -1,5 +1,5 @@
 'use client'
-import HeroImage from '@/assets/plant-roots.jpg'
+// import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
 
 // import UnderlinedText from '@/components/UnderlineText'
@@ -10,7 +10,10 @@ export default function Hero() {
       <div className="container">
         <div
           className="absolute inset-0 -z-50  bg-center bg-cover bg-no-repeat -bottom-36 md:-bottom-4"
-          style={{ backgroundImage: `url(${HeroImage.src})` }}
+          // style={{ backgroundImage: `url(${HeroImage.src})` }}
+          style={{
+            backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/023/636/954/large_2x/colorful-spring-garden-illustration-ai-generative-free-photo.jpg)`,
+          }}
         ></div>
         <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 -bottom-36 md:-bottom-4"></div>
       </div>
