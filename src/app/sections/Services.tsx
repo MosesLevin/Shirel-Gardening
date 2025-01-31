@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+
 import Image from 'next/image'
 import tree from '../../assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
@@ -60,12 +60,6 @@ const services: interfaceServices[] = [
 ]
 
 const Services = () => {
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false)
-
-  const handleAnimationComplete = () => {
-    setIsAnimationComplete(true)
-  }
-
   return (
     <div className="container mt-36 md:mt-4">
       <SectionHeader
@@ -80,12 +74,10 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              layout
               initial={{ opacity: 0, x: -40 }} // Using 'x' instead of 'transform'
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', ease: 'easeInOut', delay: 0.1 }}
-              viewport={{ once: true }}
-              onAnimationComplete={handleAnimationComplete}
+              viewport={{ amount: 'all', once: true, margin: '50px' }}
             >
               {/* Content */}
               <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 ">
@@ -101,11 +93,7 @@ const Services = () => {
                   </div>
                   <div>
                     <h3
-                      className={`text-xl font-semibold text-black md:inline-flex my-4 ${
-                        isAnimationComplete
-                          ? ' md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent '
-                          : ''
-                      }`}
+                      className={`text-xl font-semibold text-black md:inline-flex my-4`}
                     >
                       {service.title}
                     </h3>
