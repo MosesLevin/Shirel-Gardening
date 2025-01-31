@@ -1,5 +1,5 @@
 'use client'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
 import tree from '../../assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
@@ -60,15 +60,10 @@ const services: interfaceServices[] = [
 ]
 
 const Services = () => {
-  const isAnimationCompleteRef = useRef(false)
-  const [isUpdated, setIsUpdated] = useState(false)
+  const [isAnimationComplete, setIsAnimationComplete] = useState(false)
 
   const handleAnimationComplete = () => {
-    if (!isAnimationCompleteRef.current) {
-      console.log('Animation ended')
-      isAnimationCompleteRef.current = true
-      setIsUpdated(true) // Trigger a re-render
-    }
+    setIsAnimationComplete(true)
   }
 
   return (
@@ -85,11 +80,11 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              style={{ transform: 'translate3d(0,0,0)' }}
+              layout
               initial={{ opacity: 0, x: -40 }} // Using 'x' instead of 'transform'
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', ease: 'easeInOut', delay: 0.1 }}
-              viewport={{ amount: 'all', once: true, margin: '50px' }}
+              viewport={{ once: true }}
               onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
@@ -107,7 +102,7 @@ const Services = () => {
                   <div>
                     <h3
                       className={`text-xl font-semibold text-black md:inline-flex my-4 ${
-                        isUpdated
+                        isAnimationComplete
                           ? ' md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent '
                           : ''
                       }`}
