@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Image from 'next/image'
 import tree from '../../assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
@@ -60,11 +60,15 @@ const services: interfaceServices[] = [
 ]
 
 const Services = () => {
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false)
+  const isAnimationCompleteRef = useRef(false)
+  const [isUpdated, setIsUpdated] = useState(false)
 
   const handleAnimationComplete = () => {
-    console.log('Animation ended')
-    setIsAnimationComplete(true)
+    if (!isAnimationCompleteRef.current) {
+      console.log('Animation ended')
+      isAnimationCompleteRef.current = true
+      setIsUpdated(true) // Trigger a re-render
+    }
   }
 
   return (
@@ -81,10 +85,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              style={{
-                transform: 'translateZ(0)',
-                willChange: 'transform, opacity',
-              }} // Force GPU acceleration
+              style={{ transform: 'translate3d(0,0,0)' }}
               initial={{ opacity: 0, x: -40 }} // Using 'x' instead of 'transform'
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', ease: 'easeInOut', delay: 0.1 }}
@@ -106,7 +107,7 @@ const Services = () => {
                   <div>
                     <h3
                       className={`text-xl font-semibold text-black md:inline-flex my-4 ${
-                        isAnimationComplete
+                        isUpdated
                           ? ' md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent '
                           : ''
                       }`}
@@ -130,6 +131,7 @@ const Services = () => {
             width={600}
             height={400}
             className="rounded-xl object-cover h-[90%] w-[90%] "
+            loading="lazy"
           />
         </div>
       </div>
