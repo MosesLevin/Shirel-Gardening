@@ -84,12 +84,12 @@ const Services = () => {
               className=""
               initial={{ opacity: 0, x: -40 }} // Using 'x' instead of 'transform'
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ type: 'tween', ease: 'easeInOut', delay: 0.1 }}
+              transition={{ type: 'spring', ease: 'easeInOut', delay: 0.1 }}
               viewport={{ amount: 'all', once: true, margin: '50px' }}
               onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
-              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200 transform translateZ(0) overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 ">
+              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:scale-[107%] md:transition-all md:duration-200 overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 ">
                 {service.background && (
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
