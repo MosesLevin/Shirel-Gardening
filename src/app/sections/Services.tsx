@@ -82,8 +82,8 @@ const Services = () => {
             <motion.div
               key={index}
               className=""
-              initial={{ opacity: 0, x: 100 }} // Using 'x' instead of 'transform'
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: -100 }} // Using 'x' instead of 'transform'
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ type: 'spring', delay: 0.1 }}
               viewport={{ amount: 'all', once: true, margin: '100px' }}
               onAnimationComplete={handleAnimationComplete}
