@@ -6,16 +6,16 @@ import Button from '@/components/Button'
 
 export default function Hero() {
   return (
-    <section className="z-0">
+    <section className="relative z-0">
       <div className="container">
         <div
-          className="absolute inset-0 -z-50  bg-center bg-cover bg-no-repeat -bottom-36 md:-bottom-4"
+          className="absolute inset-0 -z-50  bg-center bg-cover bg-no-repeat "
           // style={{ backgroundImage: `url(${HeroImage.src})` }}
           style={{
             backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/023/636/954/large_2x/colorful-spring-garden-illustration-ai-generative-free-photo.jpg)`,
           }}
         ></div>
-        <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 -bottom-36 md:-bottom-4"></div>
+        <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 "></div>
       </div>
       <div className=" min-h-screen max-w-7xl h-full">
         <div className="absolute w-9/12 md:w- -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
