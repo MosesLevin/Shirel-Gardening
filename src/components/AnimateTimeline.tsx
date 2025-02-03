@@ -1,10 +1,10 @@
-import { motion } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
+import { useRef } from 'react'
 
-// interface AnimateTimeline {
-//   icon: string
-// }
+function AnimateTimeline() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { margin: '0px 0px -50px 0px', once: true })
 
-function AnimateTimeline({}) {
   const draw = {
     hidden: { pathLength: 0 },
     visible: (custom: number) => {
@@ -20,13 +20,14 @@ function AnimateTimeline({}) {
 
   return (
     <div className="relative">
-      <div className="absolute w-full ">
-        <div className="flex ">
+      <div className="absolute w-full">
+        <div className="flex">
           <p className="mt-20 w-30">צרפתית ויקימדיה בקר</p>
-          <div className="size-10 mt-36 -ml-8 bg-blue-400 "></div>
+          <div className="size-10 mt-36 -ml-8 bg-blue-400"></div>
         </div>
       </div>
       <motion.svg
+        ref={ref}
         className="size-40 md:size-52 -mb-4 text-p1c1"
         width="36"
         height="101"
@@ -38,8 +39,7 @@ function AnimateTimeline({}) {
           d="M35 0V91.7127C35 102.027 21.6 99.7968 0 99.7968"
           variants={draw}
           initial="hidden"
-          whileInView="visible" // Trigger animation when in view
-          viewport={{ margin: '0px 0px -50px 0px', once: true }} // Adjust margin (negative bottom margin for earlier trigger)
+          animate={isInView ? 'visible' : 'hidden'}
           stroke="currentColor"
           strokeWidth={3}
           fill="none"
