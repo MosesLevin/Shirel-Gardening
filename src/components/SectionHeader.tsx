@@ -33,13 +33,13 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   }
   // Return the title and description, if getHighlightedTitle returns a matching string
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="flex flex-col items-center justify-center text-center font-sans">
       {eyeCatch && <p className="text-xl">{eyeCatch}</p>}
       <h2 className="text-4xl font-sans font-semibold tracking-tight max-w-[220px] md:max-w-md z-10">
         {getHighlightedTitle()}
       </h2>
       {description && (
-        <p className="mt-8 max-w-3xl mx-auto text-gray-950 text-xl">
+        <p className="mt-8 max-w-3xl  text-gray-900 text-lg p-1 mx-10 text-end">
           {description}
         </p>
       )}

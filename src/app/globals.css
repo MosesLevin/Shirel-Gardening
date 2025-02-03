@@ -7,8 +7,14 @@
     @apply rounded-xl shadow focus:outline-none focus:ring focus:ring-amber-400 dark:focus:ring-sky-600 
     focus-visible:outline-none focus-visible:ring relative before:absolute before:inset-0 before:rounded-[inherit] 
     before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white/.5)_50%,transparent_75%,transparent_100%)] 
-    dark:before:bg-[linear-gradient(45deg,transparent_25%,theme(colors.white)_50%,transparent_75%,transparent_100%)] 
     before:bg-[length:250%_250%,100%_100%] before:animate-randomButton before:bg-no-repeat transform duration-500 ease-in-out;
+  }
+  .button-animation-none {
+    /* Reset or override the styles applied by .button-animation */
+    @apply rounded-none shadow-none focus:outline-none focus:ring focus:ring-amber-400 dark:focus:ring-sky-600 
+    focus-visible:outline-none focus-visible:ring relative before:absolute before:inset-0 before:rounded-[inherit] 
+    before:bg-none
+    before:bg-[length:250%_250%,100%_100%] before:bg-no-repeat transform-none duration-0;
   }
 
   .underline-with-svg {

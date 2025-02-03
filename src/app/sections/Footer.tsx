@@ -1,3 +1,6 @@
+'use client'
+import AnimatedSVG from '@/components/AnimateTimeline'
+
 export default function Footer() {
   return (
     <section>
@@ -21,6 +24,13 @@ export default function Footer() {
           <div className="size-32 bg-p2c5"></div>
         </div>
       </div>
+      <section className="relative z-10  ">
+        <div className="flex flex-col items-end md:mr-60">
+          <AnimatedSVG />
+          <AnimatedSVG />
+          <AnimatedSVG />
+        </div>
+      </section>
     </section>
   )
 }
