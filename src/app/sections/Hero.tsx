@@ -26,7 +26,7 @@ export default function Hero() {
               <span className="underline-with-svg"> מקצועי</span>
             </h1>
           </div>
-          <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-base svgUnderline">
+          <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-xl">
             בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה
             אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
             שונה
@@ -36,7 +36,7 @@ export default function Hero() {
               className=" border-white/30  border-[1px] bg-transparent hover:bg-transparent hover:border-white transition-colors hover:duration-300"
               text="לחץ פה"
             />
-            <Button className="button-animation animation " text="לחץ פה" />
+            <Button className="button-animation" text="לחץ פה" />
           </div>
         </div>
       </div>

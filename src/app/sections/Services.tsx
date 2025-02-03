@@ -17,7 +17,8 @@ type interfaceServices = {
 const services: interfaceServices[] = [
   {
     title: 'שירות 1',
-    description: 'אלו פרטי השירות המוצע מס 1.',
+    description:
+      'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <TestIcon className="size-8 text-p1c4" />,
@@ -61,17 +62,22 @@ const services: interfaceServices[] = [
 
 const Services = () => {
   const [isAnimationComplete, setIsAnimationComplete] = useState(false)
+  const [customAnimation, setCustomAnimation] = useState(false)
 
   const handleAnimationComplete = () => {
     setIsAnimationComplete(true)
+
+    setTimeout(() => {
+      setCustomAnimation(true)
+    }, 300)
   }
 
   return (
-    <div className="container mt-36 md:mt-4">
+    <div className="container ">
       <SectionHeader
-        eyeCatch="מי אנחנו"
+        eyeCatch="שירותינו"
         title="שירותי גננות בר קיימא"
-        description="ב החופשית בהיסטוריה עוד. אל בהשחתה טכניים היא. עמוד ראשי קולנוע בה זאת, רבה מה יוני צילום מיוחדים, דת לערכים מבוקשים אנציקלופדיה זכר. ישראל לעריכה זכר בה. שער ב שמות בגרסה והגולשים, כדי אם יסוד הבקשה, צרפתית הספרות אחר גם. בדף רב־לשוני לויקיפדים בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות לויקיפדיה תנך. את שונה נבחרים ואמנות צעד, סדר גם ספרות יוצרים, שתי ב והגולשים וספציפיים. זאת של החלה לערך. זכר את הרוח לערך והוא, מלא לערך כלשהו אם, שתי או שאלות משפטים ארכיאולוגיה. ליום בשפה או דרס"
+        description="קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף נולום ארווס סאפיאן - פוסיליס קוויס,  "
         underlinedWord="בר קיימא"
       />
       <div className="flex flex-col md:flex-row w-full p-8 gap-8 font-sans">
@@ -88,7 +94,7 @@ const Services = () => {
               onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
-              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 ">
+              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 ">
                 {service.background && (
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
@@ -103,7 +109,11 @@ const Services = () => {
                     <h3
                       className={`text-xl font-semibold text-black md:inline-flex my-4 ${
                         isAnimationComplete
-                          ? ' md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent '
+                          ? 'md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent'
+                          : ''
+                      } ${
+                        customAnimation
+                          ? 'sm:button-animation md:button-animation-none'
                           : ''
                       }`}
                     >
@@ -111,7 +121,7 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="mt-2 text-gray-900 my-12 relative z-10 md:text-end md:w-5/6 ml-auto">
+                <p className="mt-2 text-gray-900 my-4 relative z-10 md:text-end md:w-5/6  ml-auto p-1">
                   {service.description}
                 </p>
               </div>
@@ -126,7 +136,7 @@ const Services = () => {
             alt="Services Image"
             width={600}
             height={400}
-            className="rounded-xl object-cover h-[90%] w-[90%] "
+            className="rounded-xl object-cover h-full w-full md:h-[90%] md:w-[90%] "
             loading="lazy"
           />
         </div>
