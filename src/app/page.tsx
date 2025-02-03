@@ -7,6 +7,8 @@ import About from './sections/About'
 // import Blog from './sections/Blog'
 // import Faq from './sections/Faq'
 import Footer from './sections/Footer'
+import Reviews from './sections/Reviews'
+
 export default function Home() {
   return (
     <div>
@@ -15,6 +17,7 @@ export default function Home() {
       {/* <Timeline /> */}
       <Services />
       <About />
+      <Reviews />
       {/* <Portfolio />
       <Blog />
       <Faq /> */}
