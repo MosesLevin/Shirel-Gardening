@@ -51,11 +51,20 @@ export default {
       },
       animation: {
         randomButton: 'animateRandomButton 2s reverse infinite',
+        'left-movement': 'left-movement 1s linear infinite',
       },
       keyframes: {
         animateRandomButton: {
           '0%': { 'background-position': '200% 0, 0 0' },
           '100%': { 'background-position': '-100% 0, 0 0' },
+        },
+        'left-movement': {
+          '0%': {
+            transform: 'translateX(0%)',
+          },
+          '100%': {
+            transform: 'translateX(-50%)',
+          },
         },
       },
     },
