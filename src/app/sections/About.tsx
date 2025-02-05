@@ -1,38 +1,6 @@
 import SectionHeader from '@/components/SectionHeader'
-import Image, { StaticImageData } from 'next/image'
-import { Fragment } from 'react'
-import PlaceholderImage from '@/assets/placeholderGardener.jpg'
-import Card from '@/components/Card'
 
 function About() {
-  interface InterfaceTeamphotos {
-    image: StaticImageData
-    text: string
-    alt: string
-  }
-
-  const teamphotos: InterfaceTeamphotos[] = [
-    {
-      image: PlaceholderImage,
-      text: ' גינון בר-קיימ דות גינון בר-קיימ',
-      alt: 'Alt text',
-    },
-    {
-      image: PlaceholderImage,
-      text: ' גינון בר-קיימ דות גינון בר-קיימ',
-      alt: 'Alt text',
-    },
-    {
-      image: PlaceholderImage,
-      text: ' גינון בר-קיימ דות גינון בר-קיימ',
-      alt: 'Alt text',
-    },
-    {
-      image: PlaceholderImage,
-      text: ' גינון בר-קיימ דות גינון בר-קיימ',
-      alt: 'Alt text',
-    },
-  ]
   return (
     <section className="container font-sans">
       <div className="flex-col">
@@ -52,31 +20,32 @@ function About() {
           בעליק.
         </p>
       </div>
-      <div className="mt-12 lg:mt-8 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] md:py-4 ">
-        {/* use keyframe from tailwind config to animate, pause animation on hover */}
-        <div className="flex flex-none gap-8 pr-8 animate-left-movement [animation-duration:90s] hover:[animation-play-state:paused]">
-          {/* duplicate teamphotoss for animation like in Banner creating 2 sets of teamphotoss in the map instead of 1 */}
-          {[...new Array(2)].fill(0).map((_, idx) => (
-            <Fragment key={idx}>
-              {teamphotos.map((teamphotos, index) => (
-                <Card
-                  key={index}
-                  className="md:hover:rotate-2 transition-transform duration-200"
-                >
-                  <Image
-                    src={teamphotos.image}
-                    alt={teamphotos.alt}
-                    className="size-48 md:size-64 object-cover"
-                  />
-                </Card>
-              ))}
-            </Fragment>
-          ))}
-        </div>
-      </div>
     </section>
   )
 }
 export default About
 
 // my customer teamphotoss/recommendations
+
+// <div className="mt-12 lg:mt-8 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] md:py-4 ">
+// {/* use keyframe from tailwind config to animate, pause animation on hover */}
+// <div className="flex flex-none gap-8 pr-8 animate-left-movement [animation-duration:90s] hover:[animation-play-state:paused]">
+//   {/* duplicate teamphotoss for animation like in Banner creating 2 sets of teamphotoss in the map instead of 1 */}
+//   {[...new Array(2)].fill(0).map((_, idx) => (
+//     <Fragment key={idx}>
+//       {teamphotos.map((teamphotos, index) => (
+//         <Card
+//           key={index}
+//           className="md:hover:rotate-2 transition-transform duration-200"
+//         >
+//           <Image
+//             src={teamphotos.image}
+//             alt={teamphotos.alt}
+//             className="size-48 md:size-64 object-cover"
+//           />
+//         </Card>
+//       ))}
+//     </Fragment>
+//   ))}
+// </div>
+// </div>

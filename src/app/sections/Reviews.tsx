@@ -59,10 +59,10 @@ export default function Reviews() {
   ]
 
   return (
-    <div className="py-16 lg:py-24 mx-6 relative">
+    <div className="my-12  mx-6 relative">
       <div className="container">
         <SectionHeader eyeCatch="" title="Reviews" description="" />
-        <div className="mt-12 lg:mt-20">
+        <div className="">
           <Swiper
             spaceBetween={20}
             slidesPerView={1}
@@ -81,7 +81,7 @@ export default function Reviews() {
             }}
             modules={[Navigation, Autoplay]}
             className="px-2"
-            style={{ minHeight: '400px' }} // Set a minimum height for the Swiper container
+            style={{ minHeight: '200px', maxHeight: '400px' }} // Set a minimum height for the Swiper container
           >
             {reviews.map((review, index) => (
               <SwiperSlide

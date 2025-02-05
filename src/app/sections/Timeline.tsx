@@ -5,7 +5,7 @@ import AnimateTimeline from '@/components/AnimateTimeline'
 function Timeline() {
   return (
     <div className="relative">
-      <div className="flex flex-col items-center ml-[280px] mb-20">
+      <div className="flex flex-col items-end mr-0 md:mr-44 lg:mr-[23rem] mb-20">
         <AnimateTimeline
           text="צרפתית ויקימדיה בקר צרפתית ויקימדיה בקר"
           icon={
