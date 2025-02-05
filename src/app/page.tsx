@@ -3,7 +3,7 @@ import Hero from './sections/Hero'
 import Timeline from './sections/Timeline'
 import Services from './sections/Services'
 import About from './sections/About'
-// import Blog from './sections/Blog'
+import Blog from './sections/Blog'
 // import Faq from './sections/Faq'
 import Footer from './sections/Footer'
 import Reviews from './sections/Reviews'
@@ -19,8 +19,8 @@ export default function Home() {
       <Reviews />
       <About />
       <Gallery />
-      {/* <Blog />
-      <Faq /> */}
+      <Blog />
+      {/* <Faq /> */}
       <Footer />
     </div>
   )

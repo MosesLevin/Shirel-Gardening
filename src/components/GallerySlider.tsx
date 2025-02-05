@@ -105,7 +105,7 @@ const GallerySlider = ({
                   <Image
                     src={teamphoto.image}
                     alt={teamphoto.alt}
-                    className="size-48 md:size-64 object-cover"
+                    className="size-56 md:size-64 lg:size-72 object-cover"
                   />
                 </Card>
               ))}
