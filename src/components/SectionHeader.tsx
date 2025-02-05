@@ -39,7 +39,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
         {getHighlightedTitle()}
       </h2>
       {description && (
-        <p className="mt-8 max-w-3xl  text-gray-900 text-lg p-1 mx-10 text-end">
+        <p className="mt-8 max-w-3xl text-gray-900 text-lg p-1 mx-4 text-end ">
           {description}
         </p>
       )}

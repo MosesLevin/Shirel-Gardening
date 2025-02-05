@@ -3,7 +3,7 @@ import { useRef, useState } from 'react'
 
 interface InterfaceTimeline {
   text: string
-  icon: React.ReactNode
+  icon: React.ReactNode | string
 }
 
 function AnimateTimeline({ text, icon }: InterfaceTimeline) {
@@ -67,7 +67,7 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
               initial={{ opacity: 0, y: -40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="size-10 md:size-12 bg-p1c1 rounded-full flex-shrink-0 "
+              className=""
             >
               {icon}
             </motion.div>

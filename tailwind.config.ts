@@ -52,6 +52,7 @@ export default {
       animation: {
         randomButton: 'animateRandomButton 2s reverse infinite',
         'left-movement': 'left-movement 1s linear infinite',
+        'right-movement': 'right-movement 1s linear infinite',
       },
       keyframes: {
         animateRandomButton: {
@@ -64,6 +65,14 @@ export default {
           },
           '100%': {
             transform: 'translateX(-50%)',
+          },
+        },
+        'right-movement': {
+          '0%': {
+            transform: 'translateX(-50%)',
+          },
+          '100%': {
+            transform: 'translateX(0%)',
           },
         },
       },
