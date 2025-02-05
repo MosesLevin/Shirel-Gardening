@@ -2,7 +2,7 @@ import SectionHeader from '@/components/SectionHeader'
 
 function About() {
   return (
-    <section className="container font-sans">
+    <section className="container font-sans mb-10">
       <div className="flex-col">
         <SectionHeader
           title="אודות גינון בר-קיימא"
