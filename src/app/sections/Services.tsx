@@ -77,7 +77,7 @@ const Services = () => {
       <SectionHeader
         eyeCatch="שירותינו"
         title="שירותי גננות בר קיימא"
-        description="קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף נולום ארווס סאפיאן - פוסיליס קוויס,  "
+        description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
         underlinedWord="בר קיימא"
       />
       <div className="flex flex-col md:flex-row w-full p-8 gap-8 font-sans">

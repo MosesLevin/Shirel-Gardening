@@ -6,6 +6,7 @@ interface SectionHeaderProps {
   title: string
   underlinedWord?: string
   description?: string
+  sectionClassName?: string
 }
 
 const SectionHeader: React.FC<SectionHeaderProps> = ({
@@ -13,6 +14,7 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
   description,
   underlinedWord,
+  sectionClassName,
 }) => {
   // Function to split the title into parts if it contains the underlined word, otherwise return original title
   const getHighlightedTitle = () => {
@@ -26,20 +28,25 @@ const SectionHeader: React.FC<SectionHeaderProps> = ({
     return (
       <>
         {before}
-        <span className={twMerge('underline-with-svg')}>{underlinedWord}</span>
+        <span className="underline-with-svg">{underlinedWord}</span>
         {after}
       </>
     )
   }
   // Return the title and description, if getHighlightedTitle returns a matching string
   return (
-    <div className="flex flex-col items-center justify-center text-center font-sans">
-      {eyeCatch && <p className="text-xl">{eyeCatch}</p>}
-      <h2 className="text-4xl font-sans font-semibold tracking-tight max-w-[220px] md:max-w-md z-10">
+    <div
+      className={twMerge(
+        'flex flex-col items-center justify-center font-sans ',
+        sectionClassName
+      )}
+    >
+      {eyeCatch && <p className="text-xl ">{eyeCatch}</p>}
+      <h2 className="text-4xl font-sans text-center font-semibold tracking-tight max-w-[220px] md:max-w-md z-10">
         {getHighlightedTitle()}
       </h2>
       {description && (
-        <p className="mt-8 max-w-3xl text-gray-900 text-lg p-1 mx-4 text-end ">
+        <p className="mt-8 max-w-3xl text-gray-900 text-lg p-1 mx-4 hebrew-text">
           {description}
         </p>
       )}
