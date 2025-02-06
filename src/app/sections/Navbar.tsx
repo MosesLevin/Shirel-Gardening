@@ -159,7 +159,7 @@ export default function Navbar() {
             HoverContent={NavDropdown}
             linkClassName="text-white font-sans font-normal text-xl"
           >
-            ▼google
+            שירותים ▼
           </DesktopNavHoverLink>
           <DesktopNavHoverLink
             href="/"

@@ -4,10 +4,10 @@ import Timeline from './sections/Timeline'
 import Services from './sections/Services'
 import About from './sections/About'
 import Blog from './sections/Blog'
-// import Faq from './sections/Faq'
 import Footer from './sections/Footer'
 import Reviews from './sections/Reviews'
 import Gallery from './sections/Gallery'
+import HomeFaq from './sections/HomeFaq'
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
       <About />
       <Gallery />
       <Blog />
-      {/* <Faq /> */}
+      <HomeFaq />
       <Footer />
     </div>
   )

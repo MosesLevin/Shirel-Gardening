@@ -60,7 +60,7 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
       </motion.svg>
       <div className="absolute min-w-64 min-h-32 top-24 md:top-36 right-16 md:right-[88px] ">
         {/* Set explicit width and height */}
-        <div className="flex flex-row-reverse items-center w-full h-full ">
+        <div className="flex flex-row-reverse items-center gap-4 w-full h-full ">
           {/* Ensure flex properties are correct */}
           {showLogoText && (
             <motion.div
@@ -78,7 +78,7 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }} // Add a slight delay for the text
-              className="font-sans text-xl flex-grow max-w-[200px] md:max-w-[400px] overflow-wrap-break-word"
+              className="font-sans text-xl max-w-[200px] md:max-w-[400px] overflow-wrap-break-word hebrew-text "
             >
               {text}
             </motion.p>

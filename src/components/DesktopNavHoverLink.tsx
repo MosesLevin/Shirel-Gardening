@@ -31,13 +31,12 @@ export const DesktopNavHoverLink: FC<DesktopNavHoverLinkProps> = ({
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="group relative h-fit w-fit"
+      className="group relative h-fit w-fit hebrew-text"
     >
       {/* have a link with name of Children (text in navbar) and if we have Content show it transform it from scale0 to scale1 and show it beneath it in a div */}
       <Link
         href={href}
         className={`relative text-gray-800 hover:text-p1c5/80 transition duration-200 ${linkClassName}`}
-        style={{ direction: 'ltr', unicodeBidi: '-moz-initial' }}
       >
         {children}
         <span

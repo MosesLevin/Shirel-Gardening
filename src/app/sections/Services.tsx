@@ -77,7 +77,7 @@ const Services = () => {
       <SectionHeader
         eyeCatch="שירותינו"
         title="שירותי גננות בר קיימא"
-        description="קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף נולום ארווס סאפיאן - פוסיליס קוויס,  "
+        description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
         underlinedWord="בר קיימא"
       />
       <div className="flex flex-col md:flex-row w-full p-8 gap-8 font-sans">
@@ -94,7 +94,7 @@ const Services = () => {
               onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
-              <div className="relative md:rounded-lg p-4 group text-center md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 ">
+              <div className="relative md:rounded-lg p-4 group md:shadow md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:inset-0 md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 ">
                 {service.background && (
                   <div
                     className="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
@@ -102,12 +102,12 @@ const Services = () => {
                   />
                 )}
                 <div className="md:flex items-center md:justify-between justify-center w-1/2  md:w-full translate-x-1/2 md:translate-x-0">
-                  <div className="bg-p1c1 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
+                  <div className="bg-p1c1 md:bg-gray-200  size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
                     {service.icon}
                   </div>
                   <div>
                     <h3
-                      className={`text-xl font-semibold text-black md:inline-flex my-4 ${
+                      className={`text-xl font-semibold text-black md:inline-flex my-4 hebrew-text text-center md:text-start ${
                         isAnimationComplete
                           ? 'md:shadow-none text-white md:text-black border-black/50 border-[1px] md:border-none bg-p1c1 rounded-lg transition-all duration-300 md:bg-transparent'
                           : ''
@@ -121,7 +121,7 @@ const Services = () => {
                     </h3>
                   </div>
                 </div>
-                <p className="mt-2 text-gray-900 my-4 relative z-10 md:text-end md:w-5/6  ml-auto p-1">
+                <p className="mt-2 text-gray-900 my-4 relative z-10 md:w-5/6 hebrew-text text-center md:text-start ml-auto p-1">
                   {service.description}
                 </p>
               </div>

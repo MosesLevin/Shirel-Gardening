@@ -18,14 +18,13 @@ function BlogCard({
   writtenBy = 'גננות בר קיימא',
 }: BlogCardProps) {
   return (
-    <Card className="p-0 flex flex-col h-full mx-4 md:mx-0 hover:-translate-y-2 transition-all duration-200 shadow hover:shadow-2xl ">
+    <Card className="p-0 flex flex-col h-full md:max-h-[36rem] lg:max-h-[32rem] mx-4 md:mx-auto lg:hover:-translate-y-2 transition-all duration-200 shadow-xl lg:hover:shadow-2xl ">
       {/* Image covering the top half of the card */}
-      <div className="relative h-36 md:h-48 lg:h-60 w-full overflow-hidden">
+      <div className="relative min-h-32 md:min-h-48 lg:h-60 w-full  overflow-hidden">
         <Image src={imageUrl} alt={title} fill className="object-cover" />
       </div>
-
       {/* Content section */}
-      <div className="p-6 pb-3 flex flex-col flex-grow text-end font-sans">
+      <div className="p-6 pb-3 flex flex-col flex-grow hebrew-text font-sans">
         {/* Title and Snippet */}
         <div>
           <h2 className="text-xl font-bold mb-2">{title}</h2>
@@ -37,7 +36,7 @@ function BlogCard({
           {/* Continue reading link */}
           <a
             href={link}
-            className="flex items-center justify-end text-blue-600 hover:text-blue-800 transition-colors duration-200"
+            className="flex flex-row-reverse items-center justify-end text-blue-600 hover:text-blue-800 transition-colors duration-200"
           >
             <PlaceholderIcon className="w-4 h-4" />
             <span className="mr-2 text-lg ">המשך קריאה</span>
@@ -45,7 +44,7 @@ function BlogCard({
 
           {/* "written 2021" text */}
           <div className="h-px mb-1 bg-black/10"> </div>
-          <p className="text-xs text-start text-gray-500  ">
+          <p className="text-xs text-end text-gray-500  ">
             נכתב על ידי: {writtenBy}
           </p>
         </div>
