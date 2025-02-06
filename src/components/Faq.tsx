@@ -14,7 +14,7 @@ export default function Faq({ question, answer, link }: FaqProps) {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <div className="border-b border-gray-300 py-4 font-sans">
+    <div className="border-b border-gray-300 py-4 mx-4 md:mx-10 lg:mx-14 font-sans">
       {/* button with question and arrow  */}
       <button
         className="w-full text-left group"

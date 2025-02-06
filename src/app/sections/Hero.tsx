@@ -17,6 +17,7 @@ export default function Hero() {
         ></div>
         <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 "></div>
       </div>
+      {/* content */}
       <div className=" min-h-screen max-w-7xl h-full">
         <div className="absolute w-9/12 md:w- -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
           <div>
@@ -26,7 +27,7 @@ export default function Hero() {
               <span className="underline-with-svg"> מקצועי</span>
             </h1>
           </div>
-          <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-xl">
+          <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-xl hebrew-text">
             בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה
             אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
             שונה
