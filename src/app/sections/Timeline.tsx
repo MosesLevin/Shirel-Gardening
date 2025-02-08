@@ -7,7 +7,7 @@ function Timeline() {
     <div className="relative">
       <div className="flex flex-col items-end md:items-center md:ml-56 mb-20">
         <AnimateTimeline
-          text="צרפתית ויקימדיה בקר צרפתית ויקימדיה בקר"
+          text="שיחת הכירות ראשונית"
           icon={
             <div className="size-10 md:size-12 bg-p1c1 rounded-full flex-shrink-0 text-white font-title text-3xl font-extrabold flex items-center justify-center">
               1
@@ -15,7 +15,7 @@ function Timeline() {
           }
         />
         <AnimateTimeline
-          text="צרפתית ויקימדיה בקר צרפתית ויקימדיה בקר"
+          text="פגישה אצל הלקוח"
           icon={
             <div className="size-10 md:size-12 bg-p1c2 rounded-full flex-shrink-0 text-white font-title text-3xl font-extrabold flex items-center justify-center">
               2
@@ -23,7 +23,7 @@ function Timeline() {
           }
         />
         <AnimateTimeline
-          text="צרפתית ויקימדיה בקר צרפתית ויקימדיה בקר"
+          text="קוצרים את הפירות"
           icon={
             <div className="size-10 md:size-12 bg-p1c3 rounded-full flex-shrink-0 text-white font-title text-3xl font-extrabold flex items-center justify-center">
               3

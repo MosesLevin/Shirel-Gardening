@@ -4,6 +4,7 @@ import NavDropdown from '@/components/NavDropdown'
 import { DesktopNavHoverLink } from '@/components/DesktopNavHoverLink'
 import MobileNavDropdown from '@/components/MobileNavDropdown'
 import Logo from '@/assets/Logo.svg'
+import WhatsAppButton from '@/components/WhatsAppButton'
 
 export default function Navbar() {
   // disappearing navbar on desktop
@@ -130,52 +131,62 @@ export default function Navbar() {
 
       {/* Desktop Navbar */}
       {/* motion to have effect on load */}
-      <nav
-        className={`hidden md:flex flex-row-reverse fixed top-0 w-full justify-center gap-8 px-3 py-6 bg-none z-50 transition-transform duration-500 ease-out ${
-          // added conditional to have hide nav bar effect on scroll
-          isVisible ? '-translate-y-0' : 'transform -translate-y-full'
-        } `}
-      >
-        <div className="flex">
-          <Logo className="size-14 absolute ml-8 top-2 text-white" />
-        </div>
-        <div className="flex gap-8">
-          <DesktopNavHoverLink
-            href="/"
-            HoverContent={NavDropdown}
-            linkClassName="text-white font-sans font-normal text-xl"
-          >
-            גינון בר קיימא
-          </DesktopNavHoverLink>
-          <DesktopNavHoverLink
-            href="/"
-            HoverContent={NavDropdown}
-            linkClassName="text-white font-sans font-normal text-xl"
-          >
-            גינון
-          </DesktopNavHoverLink>
-          <DesktopNavHoverLink
-            href="/"
-            HoverContent={NavDropdown}
-            linkClassName="text-white font-sans font-normal text-xl"
-          >
-            שירותים ▼
-          </DesktopNavHoverLink>
-          <DesktopNavHoverLink
-            href="/"
-            linkClassName="text-white font-sans font-normal text-xl"
-          >
-            אודות
-          </DesktopNavHoverLink>
-        </div>
-        {/* Overlay to Blur Background */}
-        {isOpen && (
-          <div
-            className="fixed top-0 left-0 w-full h-full  bg-opacity-10 backdrop-blur-sm z-10"
-            onClick={toggleMenu} // Close menu if clicked outside
-          ></div>
-        )}
-      </nav>
+      <div className="">
+        <nav
+          className={`hidden md:flex fixed top-0  left-1/2 transform -translate-x-1/2 w-full rounded-b- justify-center gap-8 px-3 py-[1.1rem] bg-white border-b-p1c1 border-[1px] z-50 transition-transform duration-500 ease-out ${
+            isVisible ? 'translate-y-0' : 'transform -translate-y-full'
+          }`}
+        >
+          <span className="">
+            <WhatsAppButton />
+          </span>
+          <div className="flex gap-6 items-center">
+            <DesktopNavHoverLink
+              href="/"
+              HoverContent={NavDropdown}
+              linkClassName="text-black font-sans font-medium text-xl"
+            >
+              גינון בר קיימא
+            </DesktopNavHoverLink>
+            <DesktopNavHoverLink
+              href="/"
+              HoverContent={NavDropdown}
+              linkClassName="text-black font-sans font-medium text-xl"
+            >
+              <span className="flex">
+                <span>גינון</span>
+                <span className="translate-y-[0.4em] -rotate-90 mr-1">〉</span>
+              </span>
+            </DesktopNavHoverLink>
+            <div className="flex-shrink-0 mx-2">
+              <Logo className="size-14 absolute top-1 -translate-x-1/2 text-black" />
+            </div>
+            <DesktopNavHoverLink
+              href="/"
+              HoverContent={NavDropdown}
+              linkClassName="text-black font-sans font-medium text-xl"
+            >
+              <span className="flex">
+                <span>שירותים</span>
+                <span className="translate-y-[0.4em] -rotate-90 mr-1">〉</span>
+              </span>
+            </DesktopNavHoverLink>
+            <DesktopNavHoverLink
+              href="/"
+              linkClassName="text-black font-sans font-medium text-xl"
+            >
+              אודות
+            </DesktopNavHoverLink>
+          </div>
+          {/* Overlay to Blur Background */}
+          {isOpen && (
+            <div
+              className="fixed top-0 left-0 w-full h-full bg-opacity-10 backdrop-blur-sm z-10"
+              onClick={toggleMenu} // Close menu if clicked outside
+            ></div>
+          )}
+        </nav>
+      </div>
     </nav>
   )
 }

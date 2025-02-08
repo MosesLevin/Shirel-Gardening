@@ -16,7 +16,7 @@ type interfaceServices = {
 
 const services: interfaceServices[] = [
   {
-    title: 'שירות 1',
+    title: 'גיזום',
     description:
       'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
@@ -24,7 +24,7 @@ const services: interfaceServices[] = [
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'שירות 2',
+    title: 'עבודות עץ',
     description: 'אלו פרטי השירות המוצע מס 2.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',

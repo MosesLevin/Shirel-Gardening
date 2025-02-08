@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`bg-bg1 ${inter.variable} ${calistoga.variable} ${rubikBubbles.variable} ${rubikDirt.variable} antialiased`}
+        className={`bg-[#ffffff] ${inter.variable} ${calistoga.variable} ${rubikBubbles.variable} ${rubikDirt.variable} antialiased`}
       >
         {children}
       </body>
