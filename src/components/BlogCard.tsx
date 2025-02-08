@@ -21,7 +21,13 @@ function BlogCard({
     <Card className="p-0 flex flex-col h-full md:max-h-[36rem] lg:max-h-[32rem] mx-4 md:mx-auto lg:hover:-translate-y-2 transition-all duration-200 shadow-xl lg:hover:shadow-2xl ">
       {/* Image covering the top half of the card */}
       <div className="relative min-h-32 md:min-h-48 lg:h-60 w-full  overflow-hidden">
-        <Image src={imageUrl} alt={title} fill className="object-cover" />
+        <Image
+          src={imageUrl}
+          alt={title}
+          className="object-cover"
+          height={400}
+          width={400}
+        />
       </div>
       {/* Content section */}
       <div className="p-6 pb-3 flex flex-col flex-grow hebrew-text font-sans">
@@ -30,7 +36,6 @@ function BlogCard({
           <h2 className="text-xl font-bold mb-2">{title}</h2>
           <p className="text-gray-600 mb-4">{snippet}</p>
         </div>
-
         {/* Spacer to push the link and date to the bottom */}
         <div className="mt-auto">
           {/* Continue reading link */}
