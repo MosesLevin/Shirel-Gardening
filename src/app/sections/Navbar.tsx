@@ -4,7 +4,7 @@ import NavDropdown from '@/components/NavDropdown'
 import { DesktopNavHoverLink } from '@/components/DesktopNavHoverLink'
 import MobileNavDropdown from '@/components/MobileNavDropdown'
 import Logo from '@/assets/Logo.svg'
-import WhatsAppButton from '@/components/WhatsAppButton'
+import Socials from '@/components/Socials'
 
 export default function Navbar() {
   // disappearing navbar on desktop
@@ -66,14 +66,15 @@ export default function Navbar() {
         className="md:hidden fixed top-4 left-4 w-full bg-none z-20"
         ref={menuRef}
       >
+        {/* Hamburger Menu */}
         <button
           className="p-3 rounded focus:outline-none bg-black"
           onClick={toggleMenu}
         >
-          <div className="relative w-6 h-6  ">
+          <div className="relative w-6 h-6">
             {/* Top Hamburger Line */}
             <span
-              className={`absolute block h-0.5 mt-1 w-full bg-white  transition-transform duration-300 ${
+              className={`absolute block h-0.5 mt-1 w-full bg-white transition-transform duration-300 ${
                 isOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
               }`}
             ></span>
@@ -95,15 +96,15 @@ export default function Navbar() {
         <div
           className={`fixed top-0 right-0 w-80 h-full bg-white transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
-          } transition-transform duration-500 ease-in-out shadow-lg `}
+          } transition-transform duration-500 ease-in-out shadow-lg`}
         >
           <button className="p-4 mt-2 focus:outline-none" onClick={toggleMenu}>
             <div className="relative h-6 w-6">
-              <span className="absolute block h-0.5 w-full bg-black -rotate-45 "></span>
-              <span className="absolute block h-0.5 w-full bg-black rotate-45 "></span>
+              <span className="absolute block h-0.5 w-full bg-black -rotate-45"></span>
+              <span className="absolute block h-0.5 w-full bg-black rotate-45"></span>
             </div>
           </button>
-          <nav className="mt-4 text-end ">
+          <nav className="mt-4 text-end">
             <ul>
               <MobileNavDropdown label="גינון בר קיימא" />
               <MobileNavDropdown
@@ -118,6 +119,10 @@ export default function Navbar() {
               <MobileNavDropdown label="Menu Item 4" href="/" />
             </ul>
           </nav>
+          {/* Socials Component for Mobile */}
+          <div className="absolute bottom-4 left-4">
+            <Socials />
+          </div>
         </div>
       </div>
 
@@ -130,16 +135,12 @@ export default function Navbar() {
       )}
 
       {/* Desktop Navbar */}
-      {/* motion to have effect on load */}
-      <div className="">
-        <nav
-          className={`hidden md:flex fixed top-0  left-1/2 transform -translate-x-1/2 w-full rounded-b- justify-center gap-8 px-3 py-[1.1rem] bg-white border-b-p1c1 border-[1px] z-50 transition-transform duration-500 ease-out ${
-            isVisible ? 'translate-y-0' : 'transform -translate-y-full'
-          }`}
-        >
-          <span className="">
-            <WhatsAppButton />
-          </span>
+      <span
+        className={`hidden md:flex fixed top-0 left-1/2 transform -translate-x-1/2 w-full justify-center gap-8 px-3 py-[1.1rem] bg-white border-b-p1c1 border-[1px] z-50 transition-transform duration-500 ease-out ${
+          isVisible ? 'translate-y-0' : 'transform -translate-y-full'
+        }`}
+      >
+        <nav>
           <div className="flex gap-6 items-center">
             <DesktopNavHoverLink
               href="/"
@@ -178,15 +179,12 @@ export default function Navbar() {
               אודות
             </DesktopNavHoverLink>
           </div>
-          {/* Overlay to Blur Background */}
-          {isOpen && (
-            <div
-              className="fixed top-0 left-0 w-full h-full bg-opacity-10 backdrop-blur-sm z-10"
-              onClick={toggleMenu} // Close menu if clicked outside
-            ></div>
-          )}
         </nav>
-      </div>
+        {/* Socials Component for Desktop */}
+        <div className="hidden md:block absolute z-50 top-2 left-2">
+          <Socials />
+        </div>
+      </span>
     </nav>
   )
 }
