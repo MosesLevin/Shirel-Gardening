@@ -63,28 +63,25 @@ export default function Navbar() {
     <nav>
       {/* Mobile Navbar */}
       <div
-        className="md:hidden fixed top-4 left-4 w-full bg-none z-20"
+        className="md:hidden fixed left-[83%] top-4 w-full bg-none z-50"
         ref={menuRef}
       >
         {/* Hamburger Menu */}
         <button
-          className="p-3 rounded focus:outline-none bg-black"
+          className="p-3 rounded-md fixed top-4 right-4 focus:outline-none bg-p1c1 z-[60]"
           onClick={toggleMenu}
         >
           <div className="relative w-6 h-6">
-            {/* Top Hamburger Line */}
             <span
               className={`absolute block h-0.5 mt-1 w-full bg-white transition-transform duration-300 ${
                 isOpen ? 'rotate-45 translate-y-2' : 'translate-y-0'
               }`}
             ></span>
-            {/* Middle Hamburger Line */}
             <span
               className={`absolute block h-0.5 mt-1 w-full bg-white transition-opacity duration-300 ${
                 isOpen ? 'opacity-0' : 'opacity-100 translate-y-1.5'
               }`}
             ></span>
-            {/* Bottom Hamburger Line */}
             <span
               className={`absolute block h-0.5 mt-1 w-full bg-white transition-transform duration-300 ${
                 isOpen ? '-rotate-45 translate-y-2' : 'translate-y-3'
@@ -94,14 +91,15 @@ export default function Navbar() {
         </button>
 
         <div
+          ref={menuRef}
           className={`fixed top-0 right-0 w-80 h-full bg-white transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
-          } transition-transform duration-500 ease-in-out shadow-lg`}
+          } transition-transform duration-500 ease-in-out shadow-lg z-50`}
         >
           <button className="p-4 mt-2 focus:outline-none" onClick={toggleMenu}>
             <div className="relative h-6 w-6">
-              <span className="absolute block h-0.5 w-full bg-black -rotate-45"></span>
-              <span className="absolute block h-0.5 w-full bg-black rotate-45"></span>
+              {/* <span className="absolute block h-0.5 w-full bg-black -rotate-45"></span>
+              <span className="absolute block h-0.5 w-full bg-black rotate-45"></span> */}
             </div>
           </button>
           <nav className="mt-4 text-end">
