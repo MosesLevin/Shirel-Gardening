@@ -1,6 +1,8 @@
 'use client'
 // import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
+import Image from 'next/image'
+import bgtest from '@/assets/plant-roots.jpg'
 
 // import UnderlinedText from '@/components/UnderlineText'
 
@@ -8,13 +10,16 @@ export default function Hero() {
   return (
     <section className="relative z-0">
       <div className="container">
-        <div
-          className="absolute inset-0 -z-50  bg-center bg-cover bg-no-repeat "
-          // style={{ backgroundImage: `url(${HeroImage.src})` }}
-          style={{
-            backgroundImage: `url(https://static.vecteezy.com/system/resources/previews/023/636/954/large_2x/colorful-spring-garden-illustration-ai-generative-free-photo.jpg)`,
-          }}
-        ></div>
+        <div className="absolute inset-0 -z-50 overflow-hidden">
+          <Image
+            src={bgtest}
+            alt="Hero Image"
+            layout="fill"
+            objectFit="cover"
+            quality={50}
+            className="object-cover"
+          />
+        </div>
         <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 "></div>
       </div>
       {/* content */}
