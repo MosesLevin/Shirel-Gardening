@@ -36,7 +36,6 @@
   }
   .hebrew-text {
     direction: rtl;
-    unicode-bidi: bidi-override;
   }
 }
 
