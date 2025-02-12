@@ -9,6 +9,7 @@ import SectionHeader from '@/components/SectionHeader'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/autoplay'
+import Card from '@/components/Card'
 
 interface Review {
   name: string
@@ -90,7 +91,7 @@ export default function Reviews() {
                 style={{ overflow: 'visible' }}
               >
                 {/* Allow overflow */}
-                <div className="max-w-xs md:max-w-md p-6 md:p-8 hover:-translate-y-5 mt-10 transform origin-center transition duration-200 bg-white shadow-lg rounded-lg h-full font-sans text-end">
+                <Card className="max-w-xs md:max-w-md p-6 md:p-8 hover:-translate-y-2 mt-10 transform origin-center transition duration-200 bg-white shadow-lg h-full font-sans text-end">
                   <div className="flex gap-4 items-center ">
                     <div>
                       <div className="font-semibold text-black">
@@ -113,7 +114,7 @@ export default function Reviews() {
                   <p className="mt-4 md:mt-6 text-sm md:text-base text-black">
                     {review.text}
                   </p>
-                </div>
+                </Card>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -121,9 +122,11 @@ export default function Reviews() {
           {/* Custom Navigation Arrows */}
           <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition">
             <Icon className="text-gray-700" />
+            asd
           </div>
           <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition">
             <Icon className="text-gray-700" />
+            dsa
           </div>
         </div>
       </div>
