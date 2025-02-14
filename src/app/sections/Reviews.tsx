@@ -22,7 +22,7 @@ export default function Reviews() {
   const reviews: Review[] = [
     {
       name: 'משה',
-      text: 'וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו...',
+      text: 'וסטיבולום אט דולור, קראסקראס אגת לקטוס וואל אאוגו...',
       profileAvatar: Client1,
       stars: 5,
     },
