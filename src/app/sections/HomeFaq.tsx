@@ -26,9 +26,9 @@ const faqData = [
 
 function HomeFaq() {
   return (
-    <div className="container mt-16 ">
+    <div className="container my-16 ">
       <div className="mb-4">
-        <SectionHeader title="שאלות ותשובות" />
+        <SectionHeader title="שאלות נפוצות" />
       </div>
       {faqData.map((faq, index) => (
         <Faq
