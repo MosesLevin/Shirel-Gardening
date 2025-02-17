@@ -19,7 +19,7 @@ function BlogCard({
   return (
     <Card className="p-0 flex flex-col h-full mx-4 md:mx-auto lg:hover:-translate-y-2 transition-all duration-200 shadow-xl lg:hover:shadow-2xl">
       {/* Image covering the top half of the card */}
-      <div className="relative min-h-32 md:min-h-48 w-full overflow-hidden">
+      <div className="relative min-h-40 w-full overflow-hidden">
         <Image
           src={imageUrl}
           alt={title}
@@ -40,7 +40,7 @@ function BlogCard({
           {/* Continue reading link */}
           <a
             href={link}
-            className="flex flex-row-reverse items-center justify-end text-blue-600 hover:text-blue-800 transition-colors duration-200"
+            className="flex flex-row-reverse items-center justify-end text-blue-600 hover:text-blue-800 transition-colors duration-200 mb-4 -mt-8 md:-mt-0 lg:-mt-6"
           >
             <PlaceholderIcon className="w-4 h-4" />
             <span className="mr-2 text-lg">המשך קריאה</span>
