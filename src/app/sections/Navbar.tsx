@@ -180,7 +180,7 @@ export default function Navbar() {
         </nav>
         {/* Socials Component for Desktop */}
         <div className="hidden md:block absolute z-50 top-2 left-2">
-          <Socials />
+          {/* <Socials /> */}
         </div>
       </span>
     </nav>
