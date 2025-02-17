@@ -27,14 +27,14 @@ const Socials = ({ className }: SocialsInterface) => {
       name: 'WhatsApp',
       url: whatsappUrl,
       icon: WhatsAppIcon,
-      colors: 'bg-green-500 hover:bg-green-600',
+      colors: 'bg-green-500 hover:bg-green-600 transition-colors duration-200',
     },
     {
       name: 'Instagram',
       url: 'https://www.instagram.com',
       icon: InstagramIcon,
       colors:
-        'bg-gradient-to-b from-fuchsia-200 to-purple-400 hover:from-fuchsia-500 hover:to-purple-900',
+        ' bg-gradient-to-b from-fuchsia-200 to-purple-400 hover:from-fuchsia-500 hover:to-purple-900',
     },
   ]
 

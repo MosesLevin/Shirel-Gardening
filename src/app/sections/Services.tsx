@@ -16,44 +16,45 @@ type interfaceServices = {
 
 const services: interfaceServices[] = [
   {
+    title: 'גינון בר קיימא',
+    description:
+      'ניבאה. דס איאקוליס וולופטה דיאם. וסטבולום אט דולור, קראס אגת לקטוס',
+    background:
+      'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
+    icon: <TestIcon className="size-8 text-p1c4" />,
+  },
+  {
     title: 'גיזום',
     description:
-      'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
+      'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'עבודות עץ',
-    description: 'אלו פרטי השירות המוצע מס 2.',
-    background:
-      'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <TestIcon className="size-8 text-p1c4" />,
-  },
-  {
-    title: 'שירות 3',
-    description: 'אלו פרטי השירות המוצע מס 3.',
+    description: 'א. וסטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 4',
-    description: 'אלו פרטי השירות המוצע מס 4.',
+    description: 'באה. דס איאקוליס וולופטה וולופטה וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 5',
-    description: 'אלו פרטי השירות המוצע מס 5.',
+    description: 'באה. דס  איאקוליס איאקוליס וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
     title: 'שירות 6',
-    description: 'אלו פרטי השירות המוצע מס 6.',
+    description: 'באה. דס איאקוליס וולופטה דיאם וואל ופטה דיא ופטה דיא ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <TestIcon className="size-8 text-p1c4" />,
@@ -80,7 +81,7 @@ const Services = () => {
         description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
         underlinedWord="בר קיימא"
       />
-      <div className="flex flex-col md:flex-row w-full p-8 gap-8 font-sans">
+      <div className="flex flex-col md:flex-row w-full p-6 gap-8 font-sans">
         {/* Left Section (Services Cards) */}
         <div className="w-full md:w-3/4 grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 ">
           {services.map((service, index) => (
@@ -101,8 +102,8 @@ const Services = () => {
                     style={{ backgroundImage: `url(${service.background})` }}
                   />
                 )}
-                <div className="md:flex items-center md:justify-between justify-center w-1/2  md:w-full translate-x-1/2 md:translate-x-0">
-                  <div className="bg-p1c1 md:bg-gray-200  size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
+                <div className="md:flex items-center md:justify-between justify-center w-1/2 md:w-full translate-x-1/2 md:translate-x-0">
+                  <div className="bg-p1c1 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
                     {service.icon}
                   </div>
                   <div>
