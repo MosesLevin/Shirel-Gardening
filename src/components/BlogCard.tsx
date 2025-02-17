@@ -34,7 +34,7 @@ function BlogCard({
         {/* Title and Snippet */}
         <div>
           <h2 className="text-xl font-bold mb-2">{title}</h2>
-          <p className="text-gray-600 mb-4">{snippet}</p>
+          <p className="text-gray-600 mb-4 ">{snippet}</p>
         </div>
         {/* Spacer to push the link and date to the bottom */}
         <div className="mt-auto">
@@ -47,7 +47,7 @@ function BlogCard({
             <span className="mr-2 text-lg ">המשך קריאה</span>
           </a>
 
-          {/* "written 2021" text */}
+          {/* "written by 2021" text */}
           <div className="h-px mb-1 bg-black/10"> </div>
           <p className="text-xs text-end text-gray-500  ">
             נכתב על ידי: {writtenBy}
