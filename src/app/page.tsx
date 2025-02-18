@@ -8,6 +8,7 @@ import Footer from './sections/Footer'
 import Reviews from './sections/Reviews'
 import Gallery from './sections/Gallery'
 import HomeFaq from './sections/HomeFaq'
+import Location from './sections/Location'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <About />
       <Gallery />
       <Blog />
+      <Location />
       <HomeFaq />
       <Footer />
     </div>

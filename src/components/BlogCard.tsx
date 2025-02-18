@@ -17,7 +17,7 @@ function BlogCard({
   writtenBy = 'גננות בר קיימא',
 }: BlogCardProps) {
   return (
-    <Card className="p-0 flex flex-col h-full mx-4 md:mx-auto lg:hover:-translate-y-2 transition-all duration-200 shadow-xl lg:hover:shadow-2xl">
+    <Card className="p-0 flex flex-col h-full mx-4 md:mx-auto lg:hover:-translate-y-2 transition-all duration-200 shadow-lg lg:hover:shadow-xl">
       {/* Image covering the top half of the card */}
       <div className="relative min-h-40 w-full overflow-hidden">
         <Image

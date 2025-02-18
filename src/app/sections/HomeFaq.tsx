@@ -1,7 +1,6 @@
 import Faq from '@/components/Faq'
 import SectionHeader from '@/components/SectionHeader'
 import React from 'react'
-
 const faqData = [
   {
     question:
