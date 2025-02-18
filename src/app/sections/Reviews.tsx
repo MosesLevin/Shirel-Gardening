@@ -1,5 +1,5 @@
 'use client'
-import Client1 from '@/assets/grass.jpg'
+import Client1 from '@/assets/1.jpg'
 import Icon from '@/assets/SVGs/test.svg'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules'
@@ -91,7 +91,7 @@ export default function Reviews() {
                 style={{ overflow: 'visible' }}
               >
                 {/* Allow overflow */}
-                <Card className="max-w-xs md:max-w-md p-6 md:p-8 hover:-translate-y-2 mt-10 transform origin-center transition duration-200 bg-white shadow-lg h-full font-sans text-end">
+                <Card className="max-w-xs md:max-w-md p-6 md:p-8 md:hover:-translate-y-2 mt-10 transform origin-center transition duration-200 bg-white shadow-lg h-full font-sans text-end">
                   <div className="flex gap-4 items-center ">
                     <div>
                       <div className="font-semibold text-black">

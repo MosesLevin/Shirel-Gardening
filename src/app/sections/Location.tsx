@@ -2,7 +2,7 @@ import Map from '@/components/Map'
 
 function Location() {
   return (
-    <div className="bg-black/10 w-full py-12">
+    <section className="bg-black/10 w-full py-12">
       <div className="container">
         <Map
           title="גינון באיזור חיפה"
@@ -11,7 +11,7 @@ function Location() {
           longitude={34.99077}
         />
       </div>
-    </div>
+    </section>
   )
 }
 
