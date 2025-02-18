@@ -108,6 +108,8 @@ export default function Reviews() {
                         width={56}
                         height={56}
                         className="object-cover"
+                        loading="lazy"
+                        quality={30}
                       />
                     </div>
                   </div>

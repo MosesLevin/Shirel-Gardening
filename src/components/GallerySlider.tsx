@@ -106,6 +106,9 @@ const GallerySlider = ({
                     src={teamphoto.image}
                     alt={teamphoto.alt}
                     className="size-56 md:size-64 lg:size-72 object-cover"
+                    loading="lazy"
+                    width={600}
+                    height={400}
                   />
                 </Card>
               ))}
