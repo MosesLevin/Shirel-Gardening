@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react'
 import Image from 'next/image'
-import tree from '../../assets/tree2.jpg'
+import ImageServices from '@/assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
 import SectionHeader from '@/components/SectionHeader'
 // import IconGradient from '@/components/IconGradient'
@@ -114,7 +114,7 @@ const Services = () => {
                           : ''
                       } ${
                         customAnimation
-                          ? 'sm:button-animation md:button-animation-none'
+                          ? 'sm:button-animation md:button-animation-none hover:scale-110'
                           : ''
                       }`}
                     >
@@ -133,11 +133,11 @@ const Services = () => {
         {/* Right Section (Image on Desktop, Top on Mobile) */}
         <div className="md:w-1/2">
           <Image
-            src={tree}
+            src={ImageServices}
             alt="Services Image"
             width={600}
             height={400}
-            className="rounded-xl object-cover h-full w-full md:h-[90%] md:w-[90%] "
+            className="rounded-xl object-cover w-full md:h-[90%] md:w-[90%] "
             loading="lazy"
           />
         </div>

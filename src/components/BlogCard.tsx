@@ -26,6 +26,8 @@ function BlogCard({
           className="object-cover"
           height={400}
           width={400}
+          loading="lazy"
+          quality={50}
         />
       </div>
       {/* Content section */}

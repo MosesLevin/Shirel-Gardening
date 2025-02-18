@@ -2,7 +2,9 @@
 // import HeroImage from '@/assets/plant-roots.jpg'
 import Button from '@/components/Button'
 import Image from 'next/image'
-import bgtest from '@/assets/plant-roots.jpg'
+import wallpaper from '@/assets/wallpaper1.webp'
+// import wallpaper2 from '@/assets/wallpaper2.jpeg'
+// import wallpaper3 from '@/assets/wallpaper3.webp'
 
 // import UnderlinedText from '@/components/UnderlineText'
 
@@ -12,12 +14,12 @@ export default function Hero() {
       <div className="container">
         <div className="absolute inset-0 -z-50 overflow-hidden">
           <Image
-            src={bgtest}
+            src={wallpaper}
             alt="Hero Image"
-            layout="fill"
-            objectFit="cover"
+            fill
             quality={50}
             className="object-cover"
+            priority
           />
         </div>
         <div className="absolute inset-0 -z-40 bg-black bg-opacity-70 "></div>
