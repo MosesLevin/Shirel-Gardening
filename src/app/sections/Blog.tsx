@@ -30,7 +30,7 @@ const blogData = [
 
 export default function Blog() {
   return (
-    <div className="container">
+    <div className="container mb-8">
       <SectionHeader
         title="כתבות גינון בר קיימא"
         underlinedWord="כתבות"

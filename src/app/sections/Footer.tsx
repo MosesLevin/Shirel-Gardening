@@ -38,9 +38,8 @@ const Footer = () => {
           </div>
           {/* Navigation Section */}
           <div className="flex flex-col mr-12 md:mr-0">
-            <h3 className="text-lg font-semibold mb-4 p-1 underline-offset-2 underline">
-              ניווט
-            </h3>
+            <h3 className="text-lg font-semibold mb-4 p-1 ">ניווט</h3>
+            <span className="min-w-16 md:min-w-20 absolute mt-10 rounded h-0.5 bg-white/20"></span>
             <ul className="">
               <nav>
                 {navLinks.map((link, index) => (
@@ -58,9 +57,9 @@ const Footer = () => {
 
           {/* Contact Section */}
           <div className="flex flex-col mr-12 md:mr-0">
-            <h3 className="block p-1 text-lg font-semibold mb-4 underline-offset-2 underline ">
-              יצירת קשר
-            </h3>
+            <h3 className="block p-1 text-lg font-semibold mb-4">יצירת קשר</h3>
+            <span className="min-w-24 md:min-w-28 absolute mt-10 rounded h-0.5 bg-white/20"></span>
+
             <ul className="">
               <li className="block p-1 text-stone-400 transition-colors duration-200">
                 אימייל: info@example.com

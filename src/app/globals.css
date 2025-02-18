@@ -28,6 +28,10 @@
     background-repeat: no-repeat;
     z-index: -1;
   }
+  .leaflet-attribution-flag a[href="https://leafletjs.com"] svg
+  {
+    display: none;
+  }
 }
 
 @layer utilities {
@@ -36,6 +40,10 @@
   }
   .hebrew-text {
     direction: rtl;
+  }
+  .leaflet-attribution-flag a[href="https://leafletjs.com"] svg
+  {
+    display: none;
   }
 }
 
