@@ -16,7 +16,7 @@ type interfaceServices = {
 
 const services: interfaceServices[] = [
   {
-    title: 'גינון בר קיימא',
+    title: 'הקמת גינות',
     description:
       'ניבאה. דס איאקוליס וולופטה דיאם. וטבולום אט דולור, קראס אגת לקטוס',
     background:
@@ -24,7 +24,7 @@ const services: interfaceServices[] = [
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'גיזום',
+    title: 'אחזקת גינות',
     description:
       'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
@@ -32,28 +32,28 @@ const services: interfaceServices[] = [
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'עבודות עץ',
+    title: 'גיזום עצים',
     description: 'א. וסטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'שירות 4',
+    title: "פרמקלצ'ר",
     description: 'באה. דס איאקוליס וולופטה וולופטה וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'שירות 5',
+    title: 'מערכות השקייה',
     description: 'באה. דס  איאקוליס איאקוליס וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <TestIcon className="size-8 text-p1c4" />,
   },
   {
-    title: 'שירות 6',
+    title: 'עבודות עץ',
     description: 'באה. דס איאקוליס וולופטה דיאם וואל ופטה דיא ופטה דיא ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
@@ -74,7 +74,7 @@ const Services = () => {
   }
 
   return (
-    <div className="container ">
+    <div className="container  hebrew-text">
       <SectionHeader
         eyeCatch="שירותינו"
         title="שירותי גננות בר קיימא"
@@ -82,6 +82,17 @@ const Services = () => {
         underlinedWord="בר קיימא"
       />
       <div className="flex flex-col md:flex-row w-full p-6 gap-8 font-sans">
+        {/* Right Section (Image on Desktop, Top on Mobile) */}
+        <div className="md:w-1/2">
+          <Image
+            src={ImageServices}
+            alt="Services Image"
+            width={600}
+            height={400}
+            className="rounded-xl object-cover w-full md:h-[90%] md:w-[90%] "
+            loading="lazy"
+          />
+        </div>
         {/* Left Section (Services Cards) */}
         <div className="w-full md:w-3/4 grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 ">
           {services.map((service, index) => (
@@ -103,9 +114,6 @@ const Services = () => {
                   />
                 )}
                 <div className="md:flex items-center md:justify-between justify-center w-1/2 md:w-full translate-x-1/2 md:translate-x-0">
-                  <div className="bg-p1c1 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
-                    {service.icon}
-                  </div>
                   <div>
                     <h3
                       className={`text-xl font-semibold text-black md:inline-flex my-4 hebrew-text text-center md:text-start ${
@@ -121,6 +129,9 @@ const Services = () => {
                       {service.title}
                     </h3>
                   </div>
+                  <div className="bg-p1c1 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0">
+                    {service.icon}
+                  </div>
                 </div>
                 <p className="mt-2 text-gray-900 my-4 relative z-10 md:w-5/6 hebrew-text text-center md:text-start ml-auto p-1">
                   {service.description}
@@ -128,18 +139,6 @@ const Services = () => {
               </div>
             </motion.div>
           ))}
-        </div>
-
-        {/* Right Section (Image on Desktop, Top on Mobile) */}
-        <div className="md:w-1/2">
-          <Image
-            src={ImageServices}
-            alt="Services Image"
-            width={600}
-            height={400}
-            className="rounded-xl object-cover w-full md:h-[90%] md:w-[90%] "
-            loading="lazy"
-          />
         </div>
       </div>
     </div>
