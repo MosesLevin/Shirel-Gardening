@@ -9,6 +9,7 @@ import Reviews from './sections/Reviews'
 import Gallery from './sections/Gallery'
 import HomeFaq from './sections/HomeFaq'
 import Location from './sections/Location'
+import CTA from './sections/CTA'
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <Blog />
       <Location />
       <HomeFaq />
+      <CTA />
       <Footer />
     </div>
   )
