@@ -1,4 +1,3 @@
-import Navbar from './sections/Navbar'
 import Hero from './sections/Hero'
 import Timeline from './sections/Timeline'
 import Services from './sections/Services'
@@ -14,7 +13,6 @@ import CTA from './sections/CTA'
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <Hero />
       <Timeline />
       <Services />

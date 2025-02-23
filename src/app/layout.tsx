@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Calistoga, Rubik, Rubik_Bubbles, Rubik_Dirt } from 'next/font/google'
 import './globals.css'
+import Navbar from './sections/Navbar'
+import Banner from '@/components/Banner'
 
 const rubikBubbles = Rubik_Bubbles({
   weight: '400',
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={`bg-[#ffffff] ${inter.variable} ${calistoga.variable} ${rubikBubbles.variable} ${rubikDirt.variable} antialiased`}
       >
-        {children}
+        <Banner message="asd" link="/promo" />
+        <Navbar />
+        <main>{children}</main>
       </body>
     </html>
   )
