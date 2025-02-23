@@ -1,5 +1,5 @@
 import React from 'react'
-import CtaButton from '@/components/CTAButtons'
+import CtaButton from '@/components/CTAButton'
 import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
 
 function CTA() {
@@ -11,7 +11,7 @@ function CTA() {
         icon={<PlaceholderIcon className="text-white size-5" />}
       />
       <CtaButton
-        className=" button-animation"
+        className=" button-animation border-red-900 bg-red-700 shadow-[0_10px_0_0_#82181a] hover:shadow-[0_7px_0_0_#82181a]"
         text={'לייעוץ חינם'}
         icon={<PlaceholderIcon className="text-white size-5" />}
       />
