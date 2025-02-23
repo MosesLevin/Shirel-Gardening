@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import Image from 'next/image'
 import ImageServices from '@/assets/tree2.jpg'
 import TestIcon from '@/assets/SVGs/icons/icon.svg'
@@ -62,16 +62,16 @@ const services: interfaceServices[] = [
 ]
 
 const Services = () => {
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false)
-  const [customAnimation, setCustomAnimation] = useState(false)
+  // const [isAnimationComplete, setIsAnimationComplete] = useState(false)
+  // const [customAnimation, setCustomAnimation] = useState(false)
 
-  const handleAnimationComplete = () => {
-    setIsAnimationComplete(true)
+  // const handleAnimationComplete = () => {
+  //   setIsAnimationComplete(true)
 
-    setTimeout(() => {
-      setCustomAnimation(true)
-    }, 300)
-  }
+  //   setTimeout(() => {
+  //     setCustomAnimation(true)
+  //   }, 300)
+  // }
 
   return (
     <div className="container hebrew-text">
@@ -103,7 +103,7 @@ const Services = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ type: 'spring', ease: 'easeInOut', delay: 0.1 }}
               viewport={{ amount: 'all', once: true, margin: '50px' }}
-              onAnimationComplete={handleAnimationComplete}
+              // onAnimationComplete={handleAnimationComplete}
             >
               {/* Content */}
 
