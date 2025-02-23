@@ -81,7 +81,7 @@ const Services = () => {
         description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
         underlinedWord="בר קיימא"
       />
-      <div className="flex flex-col md:flex-row w-full p-6 gap-8 font-sans">
+      <div className="flex flex-col-reverse md:flex-row w-full p-6 gap-8 font-sans">
         {/* Right Section (Image on Desktop, Top on Mobile) */}
         <div className="md:w-1/2">
           <Image

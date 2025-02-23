@@ -1,11 +1,11 @@
 import React from 'react'
-import CtaButton from '@/components/CTAButton'
-import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
+// import CtaButton from '@/components/CTAButton'
+// import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
 
 function CTA() {
   return (
     <div className="flex justify-center items-center py-6 gap-2 hebrew-text">
-      <CtaButton
+      {/* <CtaButton
         text={'שלח הודעה'}
         className="border-p1c1 bg-[#25d366] shadow-[0_10px_0_0_#224E41] hover:shadow-[0_7px_0_0_#224E41]"
         icon={<PlaceholderIcon className="text-white size-5" />}
@@ -14,7 +14,7 @@ function CTA() {
         className=" button-animation border-red-900 bg-red-700 shadow-[0_10px_0_0_#82181a] hover:shadow-[0_7px_0_0_#82181a]"
         text={'לייעוץ חינם'}
         icon={<PlaceholderIcon className="text-white size-5" />}
-      />
+      /> */}
     </div>
   )
 }

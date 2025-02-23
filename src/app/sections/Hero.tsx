@@ -10,7 +10,7 @@ import wallpaper from '@/assets/wallpaper1.webp'
 
 export default function Hero() {
   return (
-    <section className="relative z-0">
+    <section className="relative z-0 ">
       <div className="container">
         <div className="absolute inset-0 -z-50 overflow-hidden">
           <Image
@@ -26,12 +26,12 @@ export default function Hero() {
       </div>
       {/* content */}
       <div className=" min-h-screen max-w-7xl h-full">
-        <div className="absolute w-9/12 md:w- -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
-          <div>
-            <h1 className="text-7xl font-bold font-sans text-white z-10">
+        <div className="absolute w-9/12 md:w-2/3 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
+          <div className="hebrew-text">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-white z-10">
               <span className="">גינון </span>
-              <span className="bg-p1c1 rounded ">בר קיימא</span>
-              <span className="underline-with-svg"> מקצועי</span>
+              <span className="bg-p1c1 rounded ">מקצועי </span>
+              <span className="underline-with-svg">איזור חיפה</span>
             </h1>
           </div>
           <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-xl hebrew-text">

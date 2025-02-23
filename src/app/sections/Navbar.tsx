@@ -5,42 +5,46 @@ import { DesktopNavHoverLink } from '@/components/DesktopNavHoverLink'
 import MobileNavDropdown from '@/components/MobileNavDropdown'
 import Logo from '@/assets/Logo.svg'
 import Socials from '@/components/Socials'
+import CTAButton from '@/components/CTAButton'
+import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
 
 export default function Navbar() {
-  // disappearing navbar on desktop
-  const [isVisible, setIsVisible] = useState(true)
+  const [isBannerVisible, setIsBannerVisible] = useState(true)
+  const [isMobileNavVisible, setIsMobileNavVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
     const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsBannerVisible(false)
+      } else {
+        setIsBannerVisible(true)
+      }
+
+      // Mobile Navbar Scroll Logic
       if (typeof window !== 'undefined') {
         if (window.scrollY > lastScrollY) {
           // Scrolling down
-          setIsVisible(false)
+          setIsMobileNavVisible(false)
         } else {
           // Scrolling up
-          setIsVisible(true)
+          setIsMobileNavVisible(true)
         }
         setLastScrollY(window.scrollY)
       }
     }
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
 
-  // state for mobile menu open/close
   const [isOpen, setIsOpen] = useState(false)
-  // ref for mobile menu to handle click outside
   const menuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-  // if menu is open then add event listener to handle click outside and close the menu
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -62,13 +66,28 @@ export default function Navbar() {
   return (
     <nav>
       {/* Mobile Navbar */}
-      <div
-        className="md:hidden fixed left-[83%] top-4 w-full bg-none z-50"
-        ref={menuRef}
-      >
+      <div className="md:hidden fixed w-full z-50" ref={menuRef}>
+        <div
+          className={`w-full bg-stone-50 border-b-[1px] flex justify-end gap-2 hebrew-text border-stone-800/30 h-[4.5rem] transition-transform duration-500 ease-out ${
+            isMobileNavVisible ? 'translate-y-0' : '-translate-y-full'
+          }`}
+        >
+          <Logo className="ml-2 size-16 mt-1" />
+
+          <CTAButton
+            className="px-2 h-12 w-24 mt-2 border-p1c1 bg-p1c2 shadow-[0_10px_0_0_#224E41] hover:shadow-[0_7px_0_0_#224E41]"
+            text={'הודעה'}
+            icon={<PlaceholderIcon className="text-white size-5" />}
+          ></CTAButton>
+          <CTAButton
+            className="px-2 h-12 w-24 mt-2 ml-2 button-animation text-black border-yellow-600 bg-[#dcc624] shadow-[0_10px_0_0_#ca8a04] hover:shadow-[0_7px_0_0_#ca8a04]"
+            text={'לייעוץ חינם'}
+            icon={<PlaceholderIcon className="text-black size-5" />}
+          ></CTAButton>
+        </div>
         {/* Hamburger Menu */}
         <button
-          className="p-3 rounded-md fixed top-4 right-4 focus:outline-none bg-p1c1 z-[60]"
+          className="p-3 rounded-md fixed top-3 right-3 focus:outline-none bg-p1c1 z-[60]"
           onClick={toggleMenu}
         >
           <div className="relative w-6 h-6">
@@ -89,7 +108,6 @@ export default function Navbar() {
             ></span>
           </div>
         </button>
-
         <div
           ref={menuRef}
           className={`fixed top-0 right-0 w-80 h-full bg-white transform ${
@@ -134,8 +152,8 @@ export default function Navbar() {
 
       {/* Desktop Navbar */}
       <span
-        className={`hidden md:flex fixed top-0 left-1/2 transform -translate-x-1/2 w-full justify-center gap-8 px-3 py-[1.1rem] bg-white border-b-p1c1 border-[1px] z-50 transition-transform duration-500 ease-out ${
-          isVisible ? 'translate-y-0' : 'transform -translate-y-full'
+        className={`hidden md:flex fixed left-1/2 transform -translate-x-1/2 w-full justify-center gap-8 px-3 py-[1.1rem] bg-stone-50 border-b-black/30 border-b-[1px] z-50 transition-all duration-500 ease-out ${
+          isBannerVisible ? 'top-[40px]' : 'top-0'
         }`}
       >
         <nav>

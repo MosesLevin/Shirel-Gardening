@@ -37,7 +37,7 @@ export default function RootLayout({
       <body
         className={`bg-[#ffffff] ${inter.variable} ${calistoga.variable} ${rubikBubbles.variable} ${rubikDirt.variable} antialiased`}
       >
-        <Banner message="asd" link="/promo" />
+        <Banner />
         <Navbar />
         <main>{children}</main>
       </body>

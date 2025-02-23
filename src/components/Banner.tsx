@@ -1,29 +1,33 @@
-import React from 'react'
+'use client'
+import { useEffect, useState } from 'react'
 
-interface BannerProps {
-  message: string
-  link?: string
-  onClose?: () => void
-}
+const Banner = () => {
+  const [isVisible, setIsVisible] = useState(true)
 
-const Banner: React.FC<BannerProps> = ({ message, link, onClose }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsVisible(false)
+      } else {
+        setIsVisible(true)
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <div className="w-full bg-blue-600 text-white text-center py-2 px-4 flex items-center justify-center relative">
-      {link ? (
-        <a href={link} className="underline">
-          {message}
-        </a>
-      ) : (
-        <span>{message}</span>
-      )}
-      {onClose && (
-        <button
-          onClick={onClose}
-          className="absolute right-4 text-white hover:text-gray-300"
-        >
-          ✕
-        </button>
-      )}
+    <div
+      className={`hidden md:flex fixed top-0 left-0 w-full h-12 bg-[#dcc624] text-center py-2 z-40 transition-transform duration-500 ease-out hebrew-text border-b-4 border-white ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
+      <div className="w-1/4 bg-black"></div>
+      <div className="w-1/2 overflow-hidden">
+        This is the banner! This is the banner! This is the banner! This is the
+      </div>
+      <div className="w-1/4"></div>
     </div>
   )
 }

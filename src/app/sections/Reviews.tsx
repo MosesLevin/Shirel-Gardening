@@ -1,6 +1,6 @@
 'use client'
 import Client1 from '@/assets/1.jpg'
-import Icon from '@/assets/SVGs/test.svg'
+import Icon from '@/assets/SVGs/icons/Facebook.svg'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Autoplay } from 'swiper/modules'
 import Image from 'next/image'
@@ -52,7 +52,7 @@ export default function Reviews() {
     },
     {
       name: 'מ4שה',
-      text: 'וסטיבולום אט דולור,  אט דולור,  אט דולור,  אט דולור,  אט דולור,  אט דולור, קראס אגת לקטוס וואל אאוגו...',
+      text: 'וסטיבולום אט דולור,  אט דולור,  אט ד דולור,  אט דולור,  אט דולור,  אט דולור,  אט דולור, ,  אט דולור,  אט דולור, ,  אט דולור,  אט דולור,  אט דולור, קראס אגת לקטוס וואל אאוגו...',
       profileAvatar: Client1,
       stars: 5,
     },
@@ -60,7 +60,7 @@ export default function Reviews() {
   ]
 
   return (
-    <div className="my-12  mx-6 relative">
+    <div className="my-12 mx-6 relative">
       <div className="container">
         <SectionHeader eyeCatch="" title="Reviews" description="" />
         <div className="">
@@ -91,7 +91,7 @@ export default function Reviews() {
                 style={{ overflow: 'visible' }}
               >
                 {/* Allow overflow */}
-                <Card className="max-w-xs md:max-w-md p-6 md:p-8 md:hover:-translate-y-2 mt-10 transform origin-center transition duration-200 bg-white shadow-lg h-full font-sans text-end">
+                <Card className="max-w-xs md:max-w-md p-6 md:p-8 mt-10 transform origin-center transition duration-200 bg-white shadow-md h-full font-sans text-end">
                   <div className="flex gap-4 items-center ">
                     <div>
                       <div className="font-semibold text-black">
@@ -122,13 +122,11 @@ export default function Reviews() {
           </Swiper>
 
           {/* Custom Navigation Arrows */}
-          <div className="swiper-button-prev absolute left-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition">
+          <div className="swiper-button-prev absolute left-0 top-1/4 -mx-4 lg:mx-2 translate-y-1/4 z-10 cursor-pointer p-3 rounded-full md:hover:bg-gray-100 transition">
             <Icon className="text-gray-700" />
-            asd
           </div>
-          <div className="swiper-button-next absolute right-0 top-1/2 -translate-y-1/2 z-10 cursor-pointer bg-white p-3 rounded-full shadow-lg hover:bg-gray-100 transition">
+          <div className="swiper-button-next absolute right-0 top-1/4 -mx-4 lg:mx-2 translate-y-1/4 z-10 cursor-pointer p-3 rounded-full  md:hover:bg-gray-100 transition">
             <Icon className="text-gray-700" />
-            dsa
           </div>
         </div>
       </div>
