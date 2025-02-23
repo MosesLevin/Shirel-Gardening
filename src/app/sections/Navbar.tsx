@@ -7,40 +7,28 @@ import Logo from '@/assets/Logo.svg'
 import Socials from '@/components/Socials'
 
 export default function Navbar() {
-  // disappearing navbar on desktop
-  const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const [isBannerVisible, setIsBannerVisible] = useState(true)
 
   useEffect(() => {
     const handleScroll = () => {
-      if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY) {
-          // Scrolling down
-          setIsVisible(false)
-        } else {
-          // Scrolling up
-          setIsVisible(true)
-        }
-        setLastScrollY(window.scrollY)
+      if (window.scrollY > 50) {
+        setIsBannerVisible(false)
+      } else {
+        setIsBannerVisible(true)
       }
     }
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', handleScroll)
-      return () => {
-        window.removeEventListener('scroll', handleScroll)
-      }
-    }
-  }, [lastScrollY])
 
-  // state for mobile menu open/close
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   const [isOpen, setIsOpen] = useState(false)
-  // ref for mobile menu to handle click outside
   const menuRef = useRef<HTMLDivElement>(null)
 
   const toggleMenu = () => {
     setIsOpen(!isOpen)
   }
-  // if menu is open then add event listener to handle click outside and close the menu
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
@@ -134,8 +122,8 @@ export default function Navbar() {
 
       {/* Desktop Navbar */}
       <span
-        className={`hidden md:flex fixed top-0 left-1/2 transform -translate-x-1/2 w-full justify-center gap-8 px-3 py-[1.1rem] bg-white border-b-p1c1 border-[1px] z-50 transition-transform duration-500 ease-out ${
-          isVisible ? 'translate-y-0' : 'transform -translate-y-full'
+        className={`hidden md:flex fixed left-1/2 transform -translate-x-1/2 w-full justify-center gap-8 px-3 py-[1rem] bg-white border-b-black/30 border-b-[1px] z-50 transition-all duration-500 ease-out ${
+          isBannerVisible ? 'top-[40px]' : 'top-0'
         }`}
       >
         <nav>
