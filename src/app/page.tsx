@@ -16,9 +16,9 @@ export default function Home() {
       <Hero />
       <Timeline />
       <Services />
-      <Reviews />
       <About />
       <Gallery />
+      <Reviews />
       <Blog />
       <Location />
       <HomeFaq />
