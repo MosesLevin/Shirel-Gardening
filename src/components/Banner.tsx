@@ -23,9 +23,13 @@ const Banner = () => {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="w-1/4 bg-black"></div>
-      <div className="w-1/2 overflow-hidden">
-        This is the banner! This is the banner! This is the banner! This is the
+      <div className="w-1/4"></div>
+      <div className="w-1/2 overflow-hidden relative">
+        <div className="absolute animate-banner-movement whitespace-nowrap animate-marquee mask-linear">
+          text text text text text text text text text text text text text text
+          text text text text text text text text text text text text text text
+          text text text text text
+        </div>
       </div>
       <div className="w-1/4"></div>
     </div>

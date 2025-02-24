@@ -89,7 +89,7 @@ const GallerySlider = ({
 
   return (
     <div className="container mx-auto p-2">
-      {/* Your existing div structure */}
+      {/* map over items left to right or right to left masked div */}
       <div className=" flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] p-2">
         <div
           className={`flex flex-none gap-8 pr-8 ${animationClass} [animation-duration:90s] hover:[animation-play-state:paused]`}
