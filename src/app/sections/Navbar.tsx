@@ -12,6 +12,7 @@ export default function Navbar() {
   const [isBannerVisible, setIsBannerVisible] = useState(true)
   const [isMobileNavVisible, setIsMobileNavVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
+  const [scrollThreshold, setScrollThreshold] = useState(0) // Threshold for hiding the mobile navbar
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,20 +24,32 @@ export default function Navbar() {
 
       // Mobile Navbar Scroll Logic
       if (typeof window !== 'undefined') {
-        if (window.scrollY > lastScrollY) {
+        const currentScrollY = window.scrollY
+
+        if (currentScrollY > lastScrollY) {
           // Scrolling down
-          setIsMobileNavVisible(false)
+          if (currentScrollY - lastScrollY > 10) {
+            // Only hide if scrolled more than 10 pixels down
+            setIsMobileNavVisible(false)
+            setScrollThreshold(currentScrollY) // Update the threshold
+          }
         } else {
           // Scrolling up
-          setIsMobileNavVisible(true)
+          if (
+            lastScrollY - currentScrollY > 10 ||
+            currentScrollY < scrollThreshold
+          ) {
+            // Show if scrolled more than 10 pixels up or below the threshold
+            setIsMobileNavVisible(true)
+          }
         }
-        setLastScrollY(window.scrollY)
+        setLastScrollY(currentScrollY)
       }
     }
 
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+  }, [lastScrollY, scrollThreshold])
 
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
@@ -81,7 +94,7 @@ export default function Navbar() {
           ></CTAButton>
           <CTAButton
             className="px-2 h-12 w-24 mt-2 ml-2 button-animation text-black border-yellow-600 bg-[#dcc624] shadow-[0_10px_0_0_#ca8a04] hover:shadow-[0_7px_0_0_#ca8a04]"
-            text={'לייעוץ חינם'}
+            text={'שיחת ייעוץ'}
             icon={<PlaceholderIcon className="text-black size-5" />}
           ></CTAButton>
         </div>
@@ -197,9 +210,7 @@ export default function Navbar() {
           </div>
         </nav>
         {/* Socials Component for Desktop */}
-        <div className="hidden md:block absolute z-50 top-2 left-2">
-          {/* <Socials /> */}
-        </div>
+        <div className="hidden md:block absolute z-50 top-2 left-2"></div>
       </span>
     </nav>
   )

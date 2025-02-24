@@ -54,6 +54,7 @@ export default {
         'left-movement': 'left-movement 1s linear infinite',
         'right-movement': 'right-movement 1s linear infinite',
         'faq-dropdown': 'slide-down 0.3s ease-in-out',
+        'banner-movement': 'banner 20s linear infinite',
       },
       keyframes: {
         animateRandomButton: {
@@ -84,6 +85,14 @@ export default {
           '100%': {
             opacity: '1',
             transform: 'translateY(0)',
+          },
+        },
+        banner: {
+          ' 0%': {
+            transform: 'translateX(100%)',
+          },
+          '100%': {
+            transform: ' translateX(-100%)',
           },
         },
       },
