@@ -28,7 +28,7 @@ export default function Navbar() {
 
         if (currentScrollY > lastScrollY) {
           // Scrolling down
-          if (currentScrollY - lastScrollY > 30) {
+          if (currentScrollY - lastScrollY > 20) {
             // Only hide if scrolled more than 10 pixels down
             setIsMobileNavVisible(false)
             setScrollThreshold(currentScrollY) // Update the threshold
