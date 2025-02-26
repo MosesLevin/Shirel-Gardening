@@ -202,7 +202,7 @@ export default function Navbar() {
               </span>
             </DesktopNavHoverLink>
             <DesktopNavHoverLink
-              href="/"
+              href="/אודות"
               linkClassName="text-black font-sans font-medium text-xl"
             >
               אודות
