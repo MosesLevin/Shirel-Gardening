@@ -2,6 +2,14 @@ import { NextConfig } from 'next'
 import { RuleSetRule } from 'webpack'
 
 const nextConfig: NextConfig = {
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/שירותים/:slug*', // Hebrew path
+  //       destination: '/services/:slug*', // Internal ASCII-friendly path
+  //     },
+  //   ]
+  // },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(
