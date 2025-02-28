@@ -6,11 +6,11 @@ type ServiceContent = {
 }
 
 const serviceContentMap: Record<string, ServiceContent> = {
-  '%D7%A9%D7%99%D7%A8%D7%95%D7%AA': {
+  שירות: {
     title: 'שירות 1',
     description: 'תיאור של שירות 1.',
   },
-  '%D7%A9%D7%99%D7%A8%D7%95%D7%AA2': {
+  שירות2: {
     title: 'שירות 2',
     description: 'תיאור של שירות 2.',
   },
@@ -22,12 +22,24 @@ interface PageProps {
   }
 }
 
-export default function ServicePage({ params }: PageProps) {
-  const { slug } = params
+export default async function ServicePage({ params }: PageProps) {
+  console.log('Raw slug:', params.slug) // Debugging
 
-  const serviceContent = serviceContentMap[slug]
+  // Ensure params.slug exists
+  if (!params.slug) {
+    console.log('Slug not found, returning 404')
+    notFound()
+  }
+
+  // Decode the slug to handle encoded Hebrew characters
+  const decodedSlug = decodeURIComponent(params.slug)
+  console.log('Decoded slug:', decodedSlug)
+
+  // Check if the decoded slug exists in the serviceContentMap
+  const serviceContent = serviceContentMap[decodedSlug]
 
   if (!serviceContent) {
+    console.log('Service not found, returning 404')
     notFound()
   }
 

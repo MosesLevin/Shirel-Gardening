@@ -16,6 +16,9 @@ type interfaceServices = {
   href?: string
 }
 
+const serviceHref = '/שירות'
+const encodedServiceHref = encodeURIComponent(serviceHref)
+
 const services: interfaceServices[] = [
   {
     title: 'הקמת גינות',
@@ -25,7 +28,7 @@ const services: interfaceServices[] = [
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <TestIcon className="size-8 text-p1c4" />,
     // href: '/הקמת-גינות/שירותים',
-    href: '/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/%D7%A9%D7%99%D7%A8%D7%95%D7%AA',
+    href: serviceHref,
   },
   {
     title: 'אחזקת גינות',
@@ -116,7 +119,10 @@ const Services = () => {
             >
               {/* Content */}
               {/* link to either href or home to satisfy typescript */}
-              <Link href={service.href ?? 'default-value'}>
+              <Link
+                href={`/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/${service.href}`}
+                // href={`שירותים/${service.href}`}
+              >
                 <div className="relative justify-items-center flex-col md:rounded-xl p-4 group md:shadow-md md:border-black/30 md:border-[1px] md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 z-0">
                   {service.background && (
                     <div
