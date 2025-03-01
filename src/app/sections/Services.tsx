@@ -2,7 +2,13 @@
 // import React, { useState } from 'react'
 import Image from 'next/image'
 import ImageServices from '@/assets/tree2.jpg'
-import TestIcon from '@/assets/SVGs/icons/icon.svg'
+import TestIcon from '@/assets/SVGs/test.svg'
+import Icon1 from '@/assets/SVGs/icons/Icon1.svg'
+import Icon2 from '@/assets/SVGs/icons/Icon2.svg'
+import Icon3 from '@/assets/SVGs/icons/Icon3.svg'
+import Icon4 from '@/assets/SVGs/icons/Icon4.svg'
+import Icon5 from '@/assets/SVGs/icons/Icon5.svg'
+import Icon6 from '@/assets/SVGs/icons/Icon6.svg'
 import SectionHeader from '@/components/SectionHeader'
 // import IconGradient from '@/components/IconGradient'
 import { motion } from 'framer-motion'
@@ -26,7 +32,7 @@ const services: interfaceServices[] = [
       'ניבאה. דס איאקוליס וולופטה דיאם. וטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon1 className="size-16 text-[#dcc624] stroke-[5]" />,
     // href: '/הקמת-גינות/שירותים',
     href: serviceHref,
   },
@@ -36,7 +42,7 @@ const services: interfaceServices[] = [
       'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon2 className="size-16 text-[#dcc624] stroke-[5]" />,
     href: 'asd',
   },
   {
@@ -44,7 +50,7 @@ const services: interfaceServices[] = [
     description: 'א. וסטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon3 className="size-16 text-[#dcc624] stroke-[5]" />,
     href: 'asd',
   },
   {
@@ -52,7 +58,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס איאקוליס וולופטה וולופטה וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon4 className="size-16 text-[#dcc624] stroke-[5]" />,
     href: 'asd',
   },
   {
@@ -60,7 +66,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס  איאקוליס איאקוליס וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon5 className="size-16 text-[#dcc624] stroke-[5]" />,
     href: 'asd',
   },
   {
@@ -68,7 +74,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס איאקוליס וולופטה דיאם וואל ופטה דיא ופטה דיא ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <TestIcon className="size-8 text-p1c4" />,
+    icon: <Icon6 className="size-16 text-[#dcc624] stroke-[5]" />,
     href: 'asd',
   },
 ]
@@ -135,7 +141,7 @@ const Services = () => {
                       {/* conditional divs for services mobile/desktop design */}
                       <div className="md:flex md:items-center md:justify-between">
                         {/* mobile */}
-                        <div className="md:hidden border-black/30 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
+                        <div className="md:hidden overflow-visible border-black/30 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
                           {service.icon}
                         </div>
                         <h3
