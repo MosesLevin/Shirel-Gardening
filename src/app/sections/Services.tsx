@@ -39,7 +39,7 @@ const services: interfaceServices[] = [
   {
     title: 'אחזקת גינות',
     description:
-      'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולופטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
+      'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולפטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <Icon2 className="size-16 text-[#dcc624] stroke-[5]" />,
