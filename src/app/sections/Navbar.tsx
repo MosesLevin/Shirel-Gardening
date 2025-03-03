@@ -7,6 +7,7 @@ import Logo from '@/assets/Logo.svg'
 import Socials from '@/components/Socials'
 import CTAButton from '@/components/CTAButton'
 import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
+import Link from 'next/link'
 
 export default function Navbar() {
   const [isBannerVisible, setIsBannerVisible] = useState(true)
@@ -85,7 +86,9 @@ export default function Navbar() {
             isMobileNavVisible ? 'translate-y-0' : '-translate-y-full'
           }`}
         >
-          <Logo className="ml-2 size-16 mt-1" />
+          <Link href="/">
+            <Logo className="ml-2 size-16 mt-1" />
+          </Link>
 
           <CTAButton
             className="px-2 h-12 w-24 mt-2 border-p1c1 bg-p1c2 shadow-[0_10px_0_0_#224E41] hover:shadow-[0_7px_0_0_#224E41]"
@@ -189,7 +192,9 @@ export default function Navbar() {
               </span>
             </DesktopNavHoverLink>
             <div className="flex-shrink-0 mx-2">
-              <Logo className="size-14 absolute top-1 -translate-x-1/2 text-black" />
+              <Link href="/">
+                <Logo className="size-14 absolute top-1 -translate-x-1/2 text-black" />
+              </Link>
             </div>
             <DesktopNavHoverLink
               href="/אודות"

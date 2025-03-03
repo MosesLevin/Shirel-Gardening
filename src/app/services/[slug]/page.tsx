@@ -51,10 +51,10 @@ export default async function Page(props: {
   }
 
   return (
-    <main className="container mt-96 font-sans">
+    <main className="container font-sans pt-32">
       <div className="flex flex-col items-center gap-4 hebrew-text">
         <h1 className="text-6xl ">{page.title}</h1>
-        <p>{page.content}</p>
+        <p className="text-base ">{page.content}</p>
         <div>מחיר</div>
         <div>CALL ME NOW</div>
       </div>
