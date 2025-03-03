@@ -126,22 +126,22 @@ const Services = () => {
               {/* Content */}
               {/* link to either href or home to satisfy typescript */}
 
-              <Link
-                // href={`/services/${encodeURIComponent(service.href || '')}`}
-                href={`services/${service.href}`}
-              >
-                <div className="relative justify-items-center flex-col md:rounded-xl p-4 group md:shadow-md md:border-black/30 md:border-[1px] md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 z-0">
-                  {service.background && (
-                    <div
-                      className="absolute inset-0 z-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
-                      style={{ backgroundImage: `url(${service.background})` }}
-                    />
-                  )}
-                  <div className="md:flex relative items-center md:justify-between justify-center md:w-full z-0">
-                    <div>
-                      {/* conditional divs for services mobile/desktop design */}
-                      <div className="md:flex md:items-center md:justify-between">
-                        {/* mobile */}
+              <div className="relative justify-items-center flex-col md:rounded-xl p-4 group md:shadow-md md:border-black/30 md:border-[1px] md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 z-0">
+                {service.background && (
+                  <div
+                    className="absolute inset-0 z-0 bg-cover bg-center opacity-0 transition-opacity duration-200 md:group-hover:opacity-100 rounded-lg"
+                    style={{ backgroundImage: `url(${service.background})` }}
+                  />
+                )}
+                <div className="md:flex relative items-center md:justify-between justify-center md:w-full z-0">
+                  <div>
+                    {/* conditional divs for services mobile/desktop design */}
+                    <div className="md:flex md:items-center md:justify-between">
+                      {/* mobile */}
+                      <Link
+                        // href={`/services/${encodeURIComponent(service.href || '')}`}
+                        href={`services/${service.href}`}
+                      >
                         <div className="md:hidden overflow-visible border-black/30 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
                           {service.icon}
                         </div>
@@ -159,14 +159,14 @@ const Services = () => {
                         <div className="hidden md:flex border-black/30 border-[1px] p-2 md:bg-gray-200 size-12 rounded-full justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
                           {service.icon}
                         </div>
-                      </div>
-                      <p className="mt-2 text-gray-900 my-4 relative md:w-5/6 text-center md:text-start ml-auto p-1 z-10 line-clamp-3">
-                        {service.description}
-                      </p>
+                      </Link>
                     </div>
+                    <p className="mt-2 text-gray-900 my-4 relative md:w-5/6 text-center md:text-start ml-auto p-1 z-10 line-clamp-3">
+                      {service.description}
+                    </p>
                   </div>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
