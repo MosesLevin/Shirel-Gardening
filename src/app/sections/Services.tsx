@@ -2,7 +2,7 @@
 // import React, { useState } from 'react'
 import Image from 'next/image'
 import ImageServices from '@/assets/tree2.jpg'
-import TestIcon from '@/assets/SVGs/test.svg'
+// import TestIcon from '@/assets/SVGs/test.svg'
 import Icon1 from '@/assets/SVGs/icons/Icon1.svg'
 import Icon2 from '@/assets/SVGs/icons/Icon2.svg'
 import Icon3 from '@/assets/SVGs/icons/Icon3.svg'
@@ -22,8 +22,8 @@ type interfaceServices = {
   href?: string
 }
 
-const serviceHref = '/שירות'
-const encodedServiceHref = encodeURIComponent(serviceHref)
+// const serviceHref = 'שירות'
+// const encodedServiceHref = encodeURIComponent(serviceHref)
 
 const services: interfaceServices[] = [
   {
@@ -34,7 +34,7 @@ const services: interfaceServices[] = [
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <Icon1 className="size-16 text-[#dcc624] stroke-[5]" />,
     // href: '/הקמת-גינות/שירותים',
-    href: serviceHref,
+    href: 'הקמת-גינות',
   },
   {
     title: 'אחזקת גינות',
@@ -43,7 +43,7 @@ const services: interfaceServices[] = [
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <Icon2 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: 'asd',
+    href: 'אחזקת-גינות',
   },
   {
     title: 'גיזום עצים',
@@ -51,7 +51,7 @@ const services: interfaceServices[] = [
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
     icon: <Icon3 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: 'asd',
+    href: 'גיזום-עצים',
   },
   {
     title: "פרמקלצ'ר",
@@ -59,7 +59,7 @@ const services: interfaceServices[] = [
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <Icon4 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: 'asd',
+    href: "פרמקלצ'ר",
   },
   {
     title: 'מערכות השקייה',
@@ -67,7 +67,7 @@ const services: interfaceServices[] = [
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <Icon5 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: 'asd',
+    href: 'מערכות-השקייה',
   },
   {
     title: 'עבודות עץ',
@@ -75,7 +75,7 @@ const services: interfaceServices[] = [
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <Icon6 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: 'asd',
+    href: 'עבודות-עץ',
   },
 ]
 
@@ -125,9 +125,10 @@ const Services = () => {
             >
               {/* Content */}
               {/* link to either href or home to satisfy typescript */}
+
               <Link
-                href={`/%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D/${service.href}`}
-                // href={`שירותים/${service.href}`}
+                // href={`/services/${encodeURIComponent(service.href || '')}`}
+                href={`services/${service.href}`}
               >
                 <div className="relative justify-items-center flex-col md:rounded-xl p-4 group md:shadow-md md:border-black/30 md:border-[1px] md:hover:translate-y-[-10px] md:transition-all md:duration-200  overflow-hidden md:before:content-[''] md:before:absolute md:before:border-[1px] md:before:border-transparent md:before:rounded-lg md:before:transition-all md:before:duration-200 md:hover:before:border-black/30 md:before:z-10 md:h-44 z-0">
                   {service.background && (

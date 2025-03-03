@@ -179,7 +179,7 @@ export default function Navbar() {
               גינון בר קיימא
             </DesktopNavHoverLink>
             <DesktopNavHoverLink
-              href="/"
+              href="/odot"
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
@@ -192,7 +192,7 @@ export default function Navbar() {
               <Logo className="size-14 absolute top-1 -translate-x-1/2 text-black" />
             </div>
             <DesktopNavHoverLink
-              href="/"
+              href="/אודות"
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
@@ -202,7 +202,7 @@ export default function Navbar() {
               </span>
             </DesktopNavHoverLink>
             <DesktopNavHoverLink
-              href="/אודות"
+              href={`/${encodeURIComponent('אודות')}`}
               linkClassName="text-black font-sans font-medium text-xl"
             >
               אודות

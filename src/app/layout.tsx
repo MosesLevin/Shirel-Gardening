@@ -3,6 +3,7 @@ import { Calistoga, Rubik, Rubik_Bubbles, Rubik_Dirt } from 'next/font/google'
 import './globals.css'
 import Navbar from './sections/Navbar'
 import Banner from '@/components/Banner'
+import Footer from './sections/Footer'
 
 const rubikBubbles = Rubik_Bubbles({
   weight: '400',
@@ -40,6 +41,7 @@ export default function RootLayout({
         <Banner />
         <Navbar />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )
