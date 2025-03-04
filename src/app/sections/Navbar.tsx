@@ -175,19 +175,18 @@ export default function Navbar() {
         <nav>
           <div className="flex gap-6 items-center">
             <DesktopNavHoverLink
-              href="/"
-              HoverContent={NavDropdown}
+              href="/צור-קשר"
               linkClassName="text-black font-sans font-medium text-xl"
             >
-              גינון בר קיימא
+              צור קשר
             </DesktopNavHoverLink>
             <DesktopNavHoverLink
-              href="/odot"
+              href="/כתבות"
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
               <span className="flex">
-                <span>גינון</span>
+                <span>כתבות</span>
                 <span className="translate-y-[0.4em] -rotate-90 mr-1">〉</span>
               </span>
             </DesktopNavHoverLink>
@@ -197,7 +196,7 @@ export default function Navbar() {
               </Link>
             </div>
             <DesktopNavHoverLink
-              href="/אודות"
+              href="/שירותים"
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
@@ -210,7 +209,7 @@ export default function Navbar() {
               href={`/${encodeURIComponent('אודות')}`}
               linkClassName="text-black font-sans font-medium text-xl"
             >
-              אודות
+              תרבות גן
             </DesktopNavHoverLink>
           </div>
         </nav>

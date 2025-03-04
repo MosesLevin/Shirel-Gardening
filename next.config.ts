@@ -2,14 +2,36 @@ import { NextConfig } from 'next'
 import { RuleSetRule } from 'webpack'
 
 const nextConfig: NextConfig = {
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/שירותים/:slug*', // Hebrew path
-  //       destination: '/services/:slug*', // Internal ASCII-friendly path
-  //     },
-  //   ]
-  // },
+  async rewrites() {
+    return [
+      // navbar
+      {
+        source: `/${encodeURIComponent('גינון')}`, // Hebrew path
+        destination: '/gardening', // Internal ASCII-friendly path
+      },
+      {
+        source: `/${encodeURIComponent('אודות')}`, // Hebrew path
+        destination: '/about', // Internal ASCII-friendly path
+      },
+      {
+        source: `/${encodeURIComponent('כתבות')}`, // Hebrew path
+        destination: '/articles', // Internal ASCII-friendly path
+      },
+      {
+        source: `/${encodeURIComponent('צור-קשר')}`, // Hebrew path
+        destination: '/contact', // Internal ASCII-friendly path
+      },
+      // services
+      {
+        source: `/${encodeURIComponent('שירותים')}`, // Hebrew path
+        destination: '/services', // Internal ASCII-friendly path
+      },
+      {
+        source: `/${encodeURIComponent('שירותים')}/:slug*`, // Hebrew path
+        destination: '/services/:slug*', // Internal ASCII-friendly path
+      },
+    ]
+  },
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find(

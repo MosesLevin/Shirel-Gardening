@@ -14,7 +14,7 @@ export default function Home() {
     <div>
       <Hero />
       <Timeline />
-      <Services />
+      <Services sectionHeader image />
       <About />
       <Gallery />
       <Reviews />
