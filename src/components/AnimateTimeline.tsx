@@ -7,7 +7,6 @@ interface InterfaceTimeline {
 }
 
 function AnimateTimeline({ text, icon }: InterfaceTimeline) {
-  // some motion div ref and stats
   const ref = useRef(null)
   const isInView = useInView(ref, { margin: '0px 0px -50px 0px', once: true })
   const [showLogoText, setShowLogoText] = useState(false)
@@ -31,13 +30,6 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
 
   return (
     <div className="relative">
-      {/* <div className="absolute w-full">
-        <div className="flex">
-          <p className="mt-28 md:mt-20  md:w-30">צרפתית ויקימדיה בקר</p>
-          <div className="size-10 mt-[106px] md:mt-36 -ml-16 md:-ml-8 bg-blue-400"></div>
-        </div>
-      </div> */}
-
       <motion.svg
         ref={ref}
         className="size-40 md:size-52 -mb-4 text-p1c1"
@@ -55,19 +47,24 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
           stroke="currentColor"
           strokeWidth={3}
           fill="none"
-          onAnimationComplete={handleShowLogoText}
+          onUpdate={(latest) => {
+            if (
+              typeof latest.pathLength === 'number' &&
+              latest.pathLength >= 0.5 &&
+              !showLogoText
+            ) {
+              handleShowLogoText()
+            }
+          }}
         />
       </motion.svg>
-      <div className="absolute min-w-64 min-h-32 top-24 md:top-36 right-16 md:right-[88px] ">
-        {/* Set explicit width and height */}
-        <div className="flex flex-row-reverse items-center gap-4 w-full h-full ">
-          {/* Ensure flex properties are correct */}
+      <div className="absolute min-w-64 min-h-32 top-24 md:top-36 right-16 md:right-[88px]">
+        <div className="flex flex-row-reverse items-center gap-4 w-full h-full">
           {showLogoText && (
             <motion.div
               initial={{ opacity: 0, y: -40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className=""
             >
               {icon}
             </motion.div>
@@ -77,8 +74,8 @@ function AnimateTimeline({ text, icon }: InterfaceTimeline) {
             <motion.p
               initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5 }} // Add a slight delay for the text
-              className="font-sans text-xl max-w-[200px] md:max-w-[400px] overflow-wrap-break-word hebrew-text "
+              transition={{ duration: 0.5 }}
+              className="font-sans text-xl max-w-[200px] md:max-w-[400px] overflow-wrap-break-word hebrew-text"
             >
               {text}
             </motion.p>
