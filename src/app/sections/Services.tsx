@@ -59,7 +59,7 @@ const services: interfaceServices[] = [
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
     icon: <Icon4 className="size-16 text-[#dcc624] stroke-[5]" />,
-    href: "פרמקלצ'ר",
+    href: 'פרמקלצר',
   },
   {
     title: 'מערכות השקייה',
@@ -79,7 +79,11 @@ const services: interfaceServices[] = [
   },
 ]
 
-const Services = () => {
+interface ServicesProps {
+  sectionHeader?: boolean
+  image?: boolean
+}
+const Services = ({ sectionHeader, image }: ServicesProps) => {
   // const [isAnimationComplete, setIsAnimationComplete] = useState(false)
   // const [customAnimation, setCustomAnimation] = useState(false)
 
@@ -93,24 +97,30 @@ const Services = () => {
 
   return (
     <div className="container hebrew-text">
-      <SectionHeader
-        eyeCatch="שירותינו"
-        title="שירותי גננות בר קיימא"
-        description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
-        underlinedWord="בר קיימא"
-      />
+      {sectionHeader && (
+        <SectionHeader
+          eyeCatch="שירותינו"
+          title="שירותי גננות בר קיימא"
+          description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
+          underlinedWord="בר קיימא"
+        />
+      )}
+
       <div className="flex flex-col-reverse md:flex-row w-full p-6 gap-8 font-sans">
         {/* Right Section (Image on Desktop, Top on Mobile) */}
-        <div className="md:w-1/2">
-          <Image
-            src={ImageServices}
-            alt="Services Image"
-            width={600}
-            height={400}
-            className="rounded-xl object-cover w-full md:h-[90%] md:w-[90%] "
-            loading="lazy"
-          />
-        </div>
+        {image && (
+          <div className="md:w-1/2">
+            <Image
+              src={ImageServices}
+              alt="Services Image"
+              width={600}
+              height={400}
+              className="rounded-xl object-cover w-full md:h-[90%] md:w-[90%] "
+              loading="lazy"
+            />
+          </div>
+        )}
+
         {/* Left Section (Services Cards) */}
         <div className="w-full grid sm:grid-cols-1 md:grid-cols-2 md:gap-4 ">
           {services.map((service, index) => (
@@ -138,32 +148,41 @@ const Services = () => {
                     {/* conditional divs for services mobile/desktop design */}
                     <div className="md:flex md:items-center md:justify-between">
                       {/* mobile */}
-                      <Link
-                        // href={`/services/${encodeURIComponent(service.href || '')}`}
-                        href={`services/${service.href}`}
-                      >
-                        <div className="md:hidden overflow-visible border-black/30 md:bg-gray-200 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
+                      <div>
+                        <div className="md:hidden overflow-visible border-black/30 size-12 rounded-full flex justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
                           {service.icon}
                         </div>
-                        <h3
-                          className={`md:hidden text-xl font-semibold text-white  my-3 text-center px-4 py-4 rounded-2xl border-stone-800 bg-p1c1 shadow-[0_10px_0_0_#292524] hover:shadow-[0_7px_0_0_#292524] tracking-widest transition-all duration-200 ease-in-out active:shadow-none active:translate-y-1 active:duration-200 border-y-2 border-x-2 z-10 `}
+                        <Link
+                          // href={`/services/${encodeURIComponent(service.href || '')}`}
+                          // as={`${encodeURIComponent('שירותים')}/${service.href}`} // URL displayed in the browser
+                          href={`שירותים/${service.href}`}
                         >
-                          {service.title}
-                        </h3>
-                        {/* tablet+ */}
-                        <h3
-                          className={`text-xl hidden relative md:block font-semibold text-black text-center md:text-start z-10`}
-                        >
-                          {service.title}
-                        </h3>
-                        <div className="hidden md:flex border-black/30 border-[1px] p-2 md:bg-gray-200 size-12 rounded-full justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
-                          {service.icon}
+                          <h3
+                            className={`md:hidden text-xl font-semibold text-white  my-3 text-center px-4 py-4 rounded-2xl border-stone-800 bg-p1c1 shadow-[0_10px_0_0_#292524] hover:shadow-[0_7px_0_0_#292524] tracking-widest transition-all duration-200 ease-in-out active:shadow-none active:translate-y-1 active:duration-200 border-y-2 border-x-2 z-10 `}
+                          >
+                            {service.title}
+                          </h3>
+                        </Link>
+                      </div>
+                      {/* tablet+ */}
+                      <Link href={`שירותים/${service.href}`}>
+                        <div className="md:flex md:items-center md:justify-between">
+                          <h3
+                            className={`text-xl hidden relative md:block font-semibold text-black text-center md:text-start z-10`}
+                          >
+                            {service.title}
+                          </h3>
+                          <div className="hidden md:flex border-black/30 border-[1px] p-2 md:bg-stone-50 size-12 rounded-full justify-center items-center text-white mx-auto md:mx-0 z-10 relative">
+                            {service.icon}
+                          </div>
+                        </div>
+                        <div>
+                          <p className="mt-2 text-gray-900 my-4 relative md:w-5/6 text-center md:text-start ml-auto p-1 z-10 line-clamp-3">
+                            {service.description}
+                          </p>
                         </div>
                       </Link>
                     </div>
-                    <p className="mt-2 text-gray-900 my-4 relative md:w-5/6 text-center md:text-start ml-auto p-1 z-10 line-clamp-3">
-                      {service.description}
-                    </p>
                   </div>
                 </div>
               </div>
