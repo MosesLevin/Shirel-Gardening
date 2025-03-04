@@ -175,13 +175,13 @@ export default function Navbar() {
         <nav>
           <div className="flex gap-6 items-center">
             <DesktopNavHoverLink
-              href="/צור-קשר"
+              href={`/${encodeURIComponent('צור-קשר')}`}
               linkClassName="text-black font-sans font-medium text-xl"
             >
               צור קשר
             </DesktopNavHoverLink>
             <DesktopNavHoverLink
-              href="/כתבות"
+              href={`/${encodeURIComponent('כתבות')}`}
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
@@ -196,7 +196,7 @@ export default function Navbar() {
               </Link>
             </div>
             <DesktopNavHoverLink
-              href="/שירותים"
+              href={`/${encodeURIComponent('שירותים')}`}
               HoverContent={NavDropdown}
               linkClassName="text-black font-sans font-medium text-xl"
             >
