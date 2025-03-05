@@ -140,7 +140,10 @@ export default function Navbar() {
           </button>
           <nav className="mt-4 text-end">
             <ul>
-              <MobileNavDropdown label="תרבות גן" />
+              <MobileNavDropdown
+                label="תרבות גן"
+                href={`/${encodeURIComponent('אודות')}`}
+              />
               <MobileNavDropdown
                 label="שירותים"
                 DropdownComponent={NavDropdown}
@@ -151,7 +154,10 @@ export default function Navbar() {
                 DropdownComponent={NavDropdown}
                 onClick={toggleMenu}
               />
-              <MobileNavDropdown label="צור קשר" href="צור-קשר" />
+              <MobileNavDropdown
+                label="צור קשר"
+                href={`/${encodeURIComponent('צור-קשר')}`}
+              />
             </ul>
           </nav>
           {/* Socials Component for Mobile */}
