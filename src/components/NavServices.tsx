@@ -20,22 +20,25 @@ const NavServices: React.FC<NavServicesProps> = ({ items, defaultImage }) => {
     <div className="hebrew-text">
       <div className="flex">
         {/* Right Side - List of Buttons */}
-        <div className="w-full md:w-1/2 p-4">
+        <div className="w-full md:w-1/2 md:p-4 grid grid-cols-2 gap-2 md:grid-cols-none md:flex-col">
           {items.map((item) => (
             <Link href={item.href} key={item.id} passHref>
               <div
                 onMouseEnter={() => setHoveredItemId(item.id)}
                 onMouseLeave={() => setHoveredItemId(null)}
-                className="mb-4"
+                className="mb-3 md:mb-4"
               >
-                <CTAButton text={item.text} className="text-base w-full" />
+                <CTAButton
+                  text={item.text}
+                  className="w-full items-center justify-center font-sans font-semibold px-2 py-4 md:px-4 md:py-3 text-white text-sm tracking-widest rounded-2xl border-stone-800 bg-p1c1 shadow-[0_10px_0_0_#292524] hover:shadow-[0_7px_0_0_#292524] "
+                />
               </div>
             </Link>
           ))}
         </div>
 
         {/* Left Side - Image Display */}
-        <div className="hidden md:flex w-1/2 p-4 mt-4 ml-4 relative h-[450px]">
+        <div className="hidden md:flex w-1/2 p-4 mt-4 ml-4 relative h-96">
           {/* Image Wrapper */}
           <div className="absolute inset-0 transition-opacity duration-500 ease-in-out">
             {/* Default Image (Only visible when no button is hovered) */}

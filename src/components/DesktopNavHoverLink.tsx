@@ -32,6 +32,7 @@ export const DesktopNavHoverLink: FC<DesktopNavHoverLinkProps> = ({
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       className="group relative h-fit w-fit hebrew-text"
+      onClick={() => setOpen(false)}
     >
       {/* have a link with name of Children (text in navbar) and if we have Content show it transform it from scale0 to scale1 and show it beneath it in a div */}
       <Link

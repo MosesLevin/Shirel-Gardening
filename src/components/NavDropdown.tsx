@@ -47,7 +47,7 @@ export default function NavDropdown() {
     },
   ]
   return (
-    <div className="w-screen max-w-xl">
+    <div className="md:w-screen max-w-xl mt-6 md:mt-0">
       {/* <Services sectionHeader={false} /> */}
       <NavServices items={items} defaultImage={image1} />
     </div>

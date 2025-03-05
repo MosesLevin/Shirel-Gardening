@@ -1,4 +1,5 @@
 'use client'
+import Link from 'next/link'
 import { useEffect, useRef, useState } from 'react'
 
 // interface for the mobile nav item
@@ -33,27 +34,33 @@ export default function MobileNavDropdown({
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
+  {
+    console.log(href)
+  }
 
   return (
     // ref to handle clickoutside and toggle dropdown. if dropdown component exists then show it
-    <li ref={itemRef} className="p-4 border-b relative">
+    <li
+      ref={itemRef}
+      className="p-4 border-b border-stone-200 relative font-sans font-medium text-lg"
+    >
       <div
         onClick={DropdownComponent ? toggleDropdown : undefined}
-        className="flex items-center cursor-pointer justify-between"
+        className="flex items-center cursor-pointer justify-between "
       >
         {/* if dropdown component exists then add the arrow with the effect when its closed or open */}
         {DropdownComponent && (
           <div
-            className={`transform transition-transform duration-300 ${
+            className={`transform transition-transform duration-300  ${
               isDropdownOpen ? 'rotate-90' : 'rotate-0'
             }`}
           >
             〉
           </div>
         )}
-        <a href={href} className="flex-1">
+        <Link href={`/${href || '/'}`} className="flex-1">
           {label}
-        </a>
+        </Link>
       </div>
       {/* motion div for */}
       {DropdownComponent && (

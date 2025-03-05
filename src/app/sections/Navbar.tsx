@@ -52,6 +52,7 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY, scrollThreshold])
 
+  // mobile nav logic
   const [isOpen, setIsOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
@@ -124,9 +125,10 @@ export default function Navbar() {
             ></span>
           </div>
         </button>
+        {/* inside the menu */}
         <div
           ref={menuRef}
-          className={`fixed top-0 right-0 w-80 h-full bg-white transform ${
+          className={`fixed top-0 right-0 w-80 h-full bg-stone-100 transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           } transition-transform duration-500 ease-in-out shadow-lg z-50`}
         >
@@ -138,17 +140,16 @@ export default function Navbar() {
           </button>
           <nav className="mt-4 text-end">
             <ul>
-              <MobileNavDropdown label="גינון בר קיימא" />
+              <MobileNavDropdown label="תרבות גן" />
               <MobileNavDropdown
-                label="פריט 1"
+                label="שירותים"
                 DropdownComponent={NavDropdown}
               />
               <MobileNavDropdown
-                label="פריט 2"
+                label="כתבות"
                 DropdownComponent={NavDropdown}
               />
-              <MobileNavDropdown label="פריט 3" />
-              <MobileNavDropdown label="Menu Item 4" href="/" />
+              <MobileNavDropdown label="צור קשר" href="צור-קשר" />
             </ul>
           </nav>
           {/* Socials Component for Mobile */}

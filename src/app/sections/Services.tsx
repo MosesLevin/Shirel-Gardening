@@ -158,7 +158,7 @@ const Services = ({ sectionHeader, image }: ServicesProps) => {
                           href={`שירותים/${service.href}`}
                         >
                           <h3
-                            className={`md:hidden text-xl font-semibold text-white  my-3 text-center px-4 py-4 rounded-2xl border-stone-800 bg-p1c1 shadow-[0_10px_0_0_#292524] hover:shadow-[0_7px_0_0_#292524] tracking-widest transition-all duration-200 ease-in-out active:shadow-none active:translate-y-1 active:duration-200 border-y-2 border-x-2 z-10 `}
+                            className={`md:hidden text-xl font-semibold text-white  my-3 text-center px-4 py-4 rounded-2xl border-stone-800 bg-p1c1 shadow-[0_10px_0_0_#292524] hover:shadow-[0_7px_0_0_#292524] tracking-widest transition-all duration-200 ease-in-out active:shadow-none active:translate-y-1 active:duration-200 border-y-2 border-x-2 z-10`}
                           >
                             {service.title}
                           </h3>
