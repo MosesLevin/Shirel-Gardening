@@ -31,8 +31,8 @@ export default {
         p1c4: '#85b666',
         p1c5: '#bad86b',
         p1c6: '#f9f871',
-        p1c7: '#395f53',
-        p1c8: '#dcc624',
+        p1c7: '#dcc624',
+        p1c8: '#395f53',
 
         p2c1: '#224E41',
         p2c2: '#99b0a8',
@@ -92,7 +92,7 @@ export default {
             transform: 'translateX(100%)',
           },
           '100%': {
-            transform: ' translateX(-100%)',
+            transform: 'translateX(-200%)',
           },
         },
       },
