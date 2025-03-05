@@ -11,9 +11,14 @@ interface NavServicesProps {
     imageUrl: string | StaticImageData
   }>
   defaultImage: string | StaticImageData
+  onClick?: () => void
 }
 
-const NavServices: React.FC<NavServicesProps> = ({ items, defaultImage }) => {
+const NavServices: React.FC<NavServicesProps> = ({
+  items,
+  defaultImage,
+  onClick,
+}) => {
   const [hoveredItemId, setHoveredItemId] = useState<string | null>(null)
 
   return (
@@ -27,6 +32,7 @@ const NavServices: React.FC<NavServicesProps> = ({ items, defaultImage }) => {
                 onMouseEnter={() => setHoveredItemId(item.id)}
                 onMouseLeave={() => setHoveredItemId(null)}
                 className="mb-3 md:mb-4"
+                onClick={onClick}
               >
                 <CTAButton
                   text={item.text}

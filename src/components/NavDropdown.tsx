@@ -7,7 +7,12 @@ import image4 from '@/assets/9.jpg'
 import image5 from '@/assets/6.jpg'
 import image6 from '@/assets/6.jpg'
 
-export default function NavDropdown() {
+interface NavDropdownProps {
+  onClick?: () => void
+}
+// component for Navbar dropdown
+
+export default function NavDropdown({ onClick }: NavDropdownProps) {
   const items = [
     {
       id: '1',
@@ -49,7 +54,7 @@ export default function NavDropdown() {
   return (
     <div className="md:w-screen max-w-xl mt-6 md:mt-0">
       {/* <Services sectionHeader={false} /> */}
-      <NavServices items={items} defaultImage={image1} />
+      <NavServices items={items} defaultImage={image1} onClick={onClick} />
     </div>
   )
 }
