@@ -144,10 +144,12 @@ export default function Navbar() {
               <MobileNavDropdown
                 label="שירותים"
                 DropdownComponent={NavDropdown}
+                onClick={toggleMenu}
               />
               <MobileNavDropdown
                 label="כתבות"
                 DropdownComponent={NavDropdown}
+                onClick={toggleMenu}
               />
               <MobileNavDropdown label="צור קשר" href="צור-קשר" />
             </ul>

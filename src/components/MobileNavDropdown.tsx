@@ -5,14 +5,16 @@ import { useEffect, useRef, useState } from 'react'
 // interface for the mobile nav item
 interface MobileNavDropdownProps {
   label: string
-  DropdownComponent?: React.FC
+  DropdownComponent?: React.FC<{ onClick?: () => void }>
   href?: string
+  onClick?: () => void
 }
 // component for Mobile Navbar view link/dropdown
 export default function MobileNavDropdown({
   label,
   DropdownComponent,
   href,
+  onClick,
 }: MobileNavDropdownProps) {
   // state for dropdown open/close with ref on element to handleClickOutside
   const [isDropdownOpen, setDropdownOpen] = useState(false)
@@ -34,9 +36,6 @@ export default function MobileNavDropdown({
       document.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
-  {
-    console.log(href)
-  }
 
   return (
     // ref to handle clickoutside and toggle dropdown. if dropdown component exists then show it
@@ -58,7 +57,7 @@ export default function MobileNavDropdown({
             〉
           </div>
         )}
-        <Link href={`/${href || '/'}`} className="flex-1">
+        <Link href={href || '/'} className="flex-1">
           {label}
         </Link>
       </div>
@@ -69,7 +68,7 @@ export default function MobileNavDropdown({
             isDropdownOpen ? 'max-h-96' : 'max-h-0'
           }`}
         >
-          <DropdownComponent />
+          <DropdownComponent onClick={onClick} />
         </div>
       )}
     </li>
