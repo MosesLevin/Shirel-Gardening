@@ -11,29 +11,33 @@ const Footer = () => {
       href: '/',
       linkText: 'בית',
     },
+
     {
-      href: '/about',
-      linkText: 'אודות',
-    },
-    {
-      href: '/about',
+      href: '/שירותים',
       linkText: 'שירותים',
     },
     {
-      href: '/contact',
-      linkText: 'בלוג',
+      href: '/אודות',
+      linkText: 'אודות',
+    },
+    {
+      href: '/כתבות',
+      linkText: 'כתבות גננות',
+    },
+
+    {
+      href: '/צור-קשר',
+      linkText: 'צור קשר',
     },
   ]
   return (
-    <footer className="bg-stone-800 text-white font-sans pt-8 hebrew-text">
+    <footer className="bg-stone-800 text-white font-sans pt-8" dir="rtl">
       <div className="container">
         {/* Flexbox Layout for Footer Content */}
         <div className="flex flex-col md:flex-row justify-evenly gap-12 ">
           {/* Logo Section */}
           <div className="flex justify-center items-center md:-ml-8">
-            <Link href="/">
-              <Logo className="size-36 text-white" />
-            </Link>
+            <Logo className="size-36 text-white" />
             <p className="text-3xl bg-p1c1 rounded p-1 px-2">תרבות גן</p>
           </div>
           {/* Navigation Section */}
@@ -46,7 +50,7 @@ const Footer = () => {
                   <Link
                     key={index}
                     href={link.href}
-                    className="block p-1 text-stone-400 transition-colors duration-200 hover:text-white"
+                    className="block p-1 py-2 lg:py-1  text-stone-400 transition-colors duration-200  hover:text-white"
                   >
                     {link.linkText}
                   </Link>
@@ -61,13 +65,13 @@ const Footer = () => {
             <span className="min-w-24 md:min-w-28 absolute mt-10 rounded h-0.5 bg-white/20"></span>
 
             <ul className="">
-              <li className="block p-1 text-stone-400 transition-colors duration-200">
+              <li className="block p-1 text-stone-400 transition-colors duration-200 py-2 lg:py-1">
                 אימייל: info@example.com
               </li>
-              <li className="block p-1 text-stone-400 transition-colors duration-200 ">
+              <li className="block p-1 text-stone-400 transition-colors duration-200 py-2 lg:py-1">
                 טלפון: 123 456 7890+
               </li>
-              <li className="block p-1 text-stone-400 transition-colors duration-200">
+              <li className="block p-1 text-stone-400 transition-colors duration-200 py-2 lg:py-1">
                 כתובת: רחוב 123, עיר, מדינה
               </li>
             </ul>
