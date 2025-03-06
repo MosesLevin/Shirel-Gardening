@@ -50,7 +50,7 @@ export default function MobileNavDropdown({
         {/* if dropdown component exists then add the arrow with the effect when its closed or open */}
         {DropdownComponent && (
           <div
-            className={`transform transition-transform duration-300  ${
+            className={`transform transition-transform duration-300 ml-4 ${
               isDropdownOpen ? 'rotate-90' : 'rotate-0'
             }`}
           >

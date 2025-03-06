@@ -8,9 +8,10 @@ import { twMerge } from 'tailwind-merge'
 
 interface SocialsInterface {
   className?: string
+  iconClassName?: string
 }
 
-const Socials = ({ className }: SocialsInterface) => {
+const Socials = ({ className, iconClassName }: SocialsInterface) => {
   const phoneNumber = '1234567890' // Replace with your phone number
   const message = 'Hello! I would like to chat.' // Optional: Pre-filled message
 
@@ -64,7 +65,8 @@ const Socials = ({ className }: SocialsInterface) => {
             target="_blank"
             rel="noopener noreferrer"
             className={twMerge(
-              ` font-bold size-14 md:size-11 rounded-full flex items-center justify-center ease-in-out opacity-75 hover:opacity-100 transition-opacity duration-200 border border-stone-300 ${social.colors}`
+              ` font-bold size-14 md:size-11 rounded-full flex items-center justify-center ease-in-out opacity-75 hover:opacity-100 transition-opacity duration-200 border border-stone-300 ${social.colors}`,
+              iconClassName
             )}
           >
             <Icon className="text-white size-8" />
