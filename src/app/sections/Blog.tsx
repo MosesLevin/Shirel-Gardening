@@ -10,7 +10,7 @@ const blogData = [
     title: '10 שאלות פוליטיקה אנתרופולוגיה בה',
     snippet:
       "מה אנא תורת בכפוף, היום מחליטה תקשורת רבה גם. בידור גרמנית משפטיכלות, דת אירועים לויקיפדים צ'ט, הארץ יידיש אגרונומיה אתה בה. קישורים ביולוגיה סטטיסטיקה בה מתן, סדר אם טיפול צרפתית.",
-    link: '/blog/10-tips-for-better-productivity',
+    link: 'מאמר-ראשון',
   },
   {
     imageUrl: blogImage2,
@@ -18,14 +18,14 @@ const blogData = [
     snippet:
       'אל בקר שתפו פיסול ואלקטרוניקה. וקשקש לערכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט. לכאן אירועים או היא, ערכים נבחרים התפתחות ב שמו.',
     writtenBy: 'מתחרה או חבר',
-    link: '/blog/future-of-ai-in-design',
+    link: 'מאמר-ראשון',
   },
   {
     imageUrl: blogImage3,
     title: 'רפואה הגרפים',
     snippet:
       'אל בקר שתפו פיסול ואלקטרוניקה. וקשקש לערכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט. לכאן אירועים או היא, ערכים נבחרים התפתחות ב שמו.',
-    link: '/blog/future-of-ai-in-design',
+    link: 'מאמר-ראשון',
   },
   // Add more blog posts as needed
 ]
@@ -47,7 +47,7 @@ export default function Blog() {
             title={blog.title}
             snippet={blog.snippet}
             writtenBy={blog.writtenBy} // Optional prop
-            link={blog.link} // Optional prop
+            link={`כתבות/${blog.link}`} // Optional prop
           />
         ))}
       </div>
