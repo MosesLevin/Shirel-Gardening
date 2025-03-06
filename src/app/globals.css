@@ -41,6 +41,9 @@
   .hebrew-text {
     direction: rtl;
   }
+  .hebrew-text-none {
+    direction: ltr;
+  }
   .leaflet-attribution-flag a[href="https://leafletjs.com"] svg
   {
     display: none;

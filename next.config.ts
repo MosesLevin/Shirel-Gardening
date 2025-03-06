@@ -30,6 +30,11 @@ const nextConfig: NextConfig = {
         source: `/${encodeURIComponent('שירותים')}/:slug*`, // Hebrew path
         destination: '/services/:slug*', // Internal ASCII-friendly path
       },
+      // articles
+      {
+        source: `/${encodeURIComponent('כתבות')}/:slug*`, // Hebrew path
+        destination: '/articles/:slug*', // Internal ASCII-friendly path
+      },
     ]
   },
   webpack(config) {

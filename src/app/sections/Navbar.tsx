@@ -128,31 +128,31 @@ export default function Navbar() {
         {/* inside the menu */}
         <div
           ref={menuRef}
-          className={`fixed top-0 right-0 w-80 h-full bg-stone-100 transform ${
+          className={`fixed top-0 right-0 w-80 h-full bg-stone-50 transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full'
           } transition-transform duration-500 ease-in-out shadow-lg z-50`}
         >
-          <button className="p-4 mt-2 focus:outline-none" onClick={toggleMenu}>
-            <div className="relative h-6 w-6">
-              {/* <span className="absolute block h-0.5 w-full bg-black -rotate-45"></span>
-              <span className="absolute block h-0.5 w-full bg-black rotate-45"></span> */}
-            </div>
-          </button>
-          <nav className="mt-4 text-end">
+          {/* button to emulate size and trigger hamburger menu */}
+          <div className="w-1/4 justify-center flex">
+            <Link href={'/'} onClick={toggleMenu}>
+              <Logo className="size-[5rem] mt-2 ml-2" />
+            </Link>
+          </div>
+          <nav className="mt-2 text-end">
             <ul>
-              <MobileNavDropdown
-                label="תרבות גן"
-                href={`/${encodeURIComponent('אודות')}`}
-              />
+              <MobileNavDropdown label="דף הבית" href="/" />
               <MobileNavDropdown
                 label="שירותים"
                 DropdownComponent={NavDropdown}
                 onClick={toggleMenu}
               />
               <MobileNavDropdown
+                label="תרבות גן"
+                href={`/${encodeURIComponent('אודות')}`}
+              />
+              <MobileNavDropdown
                 label="כתבות"
-                DropdownComponent={NavDropdown}
-                onClick={toggleMenu}
+                href={`/${encodeURIComponent('כתבות')}`}
               />
               <MobileNavDropdown
                 label="צור קשר"
@@ -161,8 +161,11 @@ export default function Navbar() {
             </ul>
           </nav>
           {/* Socials Component for Mobile */}
-          <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-            <Socials />
+          {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
+            <Socials iconClassName="size-12 opacity-1 transition-none" />
+          </div> */}
+          <div className="flex justify-center mt-[11rem]" dir="rtl">
+            <Socials iconClassName="size-12 opacity-1 transition-none" />
           </div>
         </div>
       </div>
