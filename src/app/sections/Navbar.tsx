@@ -6,7 +6,8 @@ import MobileNavDropdown from '@/components/MobileNavDropdown'
 import Logo from '@/assets/Logo.svg'
 import Socials from '@/components/Socials'
 import CTAButton from '@/components/CTAButton'
-import PlaceholderIcon from '@/assets/SVGs/icons/WhatsApp.svg'
+import WhatsappIcon from '@/assets/SVGs/icons/WhatsApp.svg'
+import TelephoneIcon from '@/assets/SVGs/icons/Telephone.svg'
 import Link from 'next/link'
 
 export default function Navbar() {
@@ -94,12 +95,14 @@ export default function Navbar() {
           <CTAButton
             className="px-2 h-12 w-24 mt-2 border-p1c1 bg-p1c2 shadow-[0_10px_0_0_#224E41] hover:shadow-[0_7px_0_0_#224E41]"
             text={'הודעה'}
-            icon={<PlaceholderIcon className="text-white size-5" />}
+            icon={<WhatsappIcon className="text-white size-7" />}
+            iconClassName="stroke-[6] stroke-white"
           ></CTAButton>
           <CTAButton
             className="px-2 h-12 w-24 mt-2 ml-2 button-animation text-black border-yellow-600 bg-[#dcc624] shadow-[0_10px_0_0_#ca8a04] hover:shadow-[0_7px_0_0_#ca8a04]"
             text={'שיחת ייעוץ'}
-            icon={<PlaceholderIcon className="text-black size-5" />}
+            icon={<TelephoneIcon className="text-black size-7" />}
+            iconClassName=" stroke-[8] stroke-black"
           ></CTAButton>
         </div>
         {/* Hamburger Menu */}
@@ -164,7 +167,7 @@ export default function Navbar() {
           {/* <div className="absolute bottom-4 left-1/2 -translate-x-1/2">
             <Socials iconClassName="size-12 opacity-1 transition-none" />
           </div> */}
-          <div className="flex justify-center mt-[11rem]" dir="rtl">
+          <div className="flex justify-center mt-[10rem]" dir="rtl">
             <Socials iconClassName="size-12 opacity-1 transition-none" />
           </div>
         </div>

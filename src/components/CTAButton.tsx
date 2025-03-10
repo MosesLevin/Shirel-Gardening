@@ -5,6 +5,7 @@ interface CtaButtonProps {
   className?: string
   text?: string
   icon?: React.ReactNode
+  iconClassName?: string
   children?: React.ReactNode
   onClick?: () => void
 }
@@ -13,6 +14,7 @@ const CTAButton: React.FC<CtaButtonProps> = ({
   className,
   text,
   icon,
+  iconClassName,
   children,
   onClick,
 }) => {
@@ -26,7 +28,7 @@ const CTAButton: React.FC<CtaButtonProps> = ({
     >
       {children}
       {text}
-      {icon && <span className="mr-2">{icon}</span>}
+      {icon && <span className={twMerge('mr-2', iconClassName)}>{icon}</span>}
     </button>
   )
 }

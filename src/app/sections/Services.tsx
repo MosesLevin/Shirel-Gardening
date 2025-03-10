@@ -32,7 +32,7 @@ const services: interfaceServices[] = [
       'ניבאה. דס איאקוליס וולופטה דיאם. וטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <Icon1 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon1 className="size-16 text-[#dcc624] stroke-[10] stroke-p1c7" />,
     // href: '/הקמת-גינות/שירותים',
     href: 'הקמת-גינות',
   },
@@ -42,7 +42,7 @@ const services: interfaceServices[] = [
       'אלו פרטי   ניסי נון ניבאה. דס איאקוליס וולפטה דיאם וואל אאוגו וסטיבולום  שירות  המוצע מס 1.',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <Icon2 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon2 className="size-16 text-[#dcc624] stroke-[2] stroke-p1c7" />,
     href: 'אחזקת-גינות',
   },
   {
@@ -50,7 +50,7 @@ const services: interfaceServices[] = [
     description: 'א. וסטבולום אט דולור, קראס אגת לקטוס',
     background:
       'https://img.freepik.com/free-vector/hand-drawn-abstract-outline-background_23-2150695205.jpg?t=st=1738168359~exp=1738171959~hmac=ee9e1ea102f8c350b681f28d7ef6cf680633794f8b4e3b91f804211536c6db1d&w=2000',
-    icon: <Icon3 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon3 className="size-16 text-[#dcc624] stroke-[10] stroke-p1c7" />,
     href: 'גיזום-עצים',
   },
   {
@@ -58,7 +58,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס איאקוליס וולופטה וולופטה וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <Icon4 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon4 className="size-16 text-[#dcc624] stroke-[15] stroke-p1c7" />,
     href: 'פרמקלצר',
   },
   {
@@ -66,7 +66,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס  איאקוליס איאקוליס וולופטה דיאם וואל ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <Icon5 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon5 className="size-16 text-[#dcc624] stroke-[20] stroke-p1c7" />,
     href: 'מערכות-השקייה',
   },
   {
@@ -74,7 +74,7 @@ const services: interfaceServices[] = [
     description: 'באה. דס איאקוליס וולופטה דיאם וואל ופטה דיא ופטה דיא ',
     background:
       'https://www.rainbowlawncare.com/wp-content/uploads/2017/02/RLC-no-mow-guy-768x475.jpg.webp',
-    icon: <Icon6 className="size-16 text-[#dcc624] stroke-[5]" />,
+    icon: <Icon6 className="size-16 text-[#dcc624] stroke-[5] stroke-p1c7" />,
     href: 'עבודות-עץ',
   },
 ]

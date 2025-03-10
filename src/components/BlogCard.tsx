@@ -44,8 +44,8 @@ function BlogCard({
             href={link}
             className="flex flex-row-reverse items-center justify-end text-blue-600 hover:text-blue-800 transition-colors duration-200 mb-4 -mt-8 md:-mt-0 lg:-mt-6"
           >
-            <PlaceholderIcon className="w-4 h-4" />
-            <span className="mr-2 text-lg">המשך קריאה</span>
+            <PlaceholderIcon className="size-4 stroke-[50] stroke-current mr-1" />
+            <span className="mr-2 text-lg">להמשך קריאה</span>
           </a>
 
           {/* Divider and "written by" text */}
