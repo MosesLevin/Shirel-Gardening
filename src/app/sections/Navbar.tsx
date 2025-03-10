@@ -16,6 +16,9 @@ export default function Navbar() {
   const [lastScrollY, setLastScrollY] = useState(0)
   const [scrollThreshold, setScrollThreshold] = useState(0) // Threshold for hiding the mobile navbar
 
+  const phoneNumber = '+1234567890' // Replace with an actual number
+  const whatsappMessage = encodeURIComponent('שלום! רציתי לשאול אם...')
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -97,12 +100,19 @@ export default function Navbar() {
             text={'הודעה'}
             icon={<WhatsappIcon className="text-white size-7" />}
             iconClassName="stroke-[6] stroke-white"
+            onClick={() =>
+              window.open(
+                `https://wa.me/${phoneNumber}?text=${whatsappMessage}`,
+                '_blank'
+              )
+            }
           ></CTAButton>
           <CTAButton
             className="px-2 h-12 w-24 mt-2 ml-2 button-animation text-black border-yellow-600 bg-[#dcc624] shadow-[0_10px_0_0_#ca8a04] hover:shadow-[0_7px_0_0_#ca8a04]"
             text={'שיחת ייעוץ'}
             icon={<TelephoneIcon className="text-black size-7" />}
             iconClassName=" stroke-[8] stroke-black"
+            onClick={() => (window.location.href = `tel:${phoneNumber}`)}
           ></CTAButton>
         </div>
         {/* Hamburger Menu */}
