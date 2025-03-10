@@ -24,6 +24,7 @@ const Socials = ({ className, iconClassName }: SocialsInterface) => {
     url: string
     icon: React.FC<React.SVGProps<SVGSVGElement>>
     colors: string
+    iconClassName?: string
   }
 
   const socials: SocialLink[] = [
@@ -32,6 +33,7 @@ const Socials = ({ className, iconClassName }: SocialsInterface) => {
       url: whatsappUrl,
       icon: WhatsAppIcon,
       colors: 'bg-[#25d366]',
+      iconClassName: 'stroke-[10]',
     },
     {
       name: 'Facebook',
@@ -51,6 +53,7 @@ const Socials = ({ className, iconClassName }: SocialsInterface) => {
       url: 'https://www.youtube.com',
       icon: YoutubeIcon,
       colors: 'bg-[#cd201f]',
+      iconClassName: 'stroke-[10]',
     },
   ]
 
@@ -66,10 +69,15 @@ const Socials = ({ className, iconClassName }: SocialsInterface) => {
             rel="noopener noreferrer"
             className={twMerge(
               ` font-bold size-14 md:size-11 rounded-full flex items-center justify-center ease-in-out opacity-75 hover:opacity-100 transition-opacity duration-200 border border-stone-300 ${social.colors}`,
-              iconClassName
+              className
             )}
           >
-            <Icon className="text-white size-8" />
+            <Icon
+              className={twMerge(
+                `text-white size-8 stroke-[0] stroke-white ${social.iconClassName}`,
+                iconClassName
+              )}
+            />
           </a>
         )
       })}

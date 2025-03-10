@@ -58,7 +58,7 @@ export default function Map({
   }, [])
 
   if (!isClient || !markerIcon) {
-    return <div>Loading map...</div>
+    return <div className="hebrew-text">טוען מפה...</div>
   }
 
   return (
