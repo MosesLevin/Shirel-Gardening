@@ -99,10 +99,10 @@ const Services = ({ sectionHeader, image }: ServicesProps) => {
     <div className="container hebrew-text">
       {sectionHeader && (
         <SectionHeader
-          eyeCatch="שירותינו"
-          title="שירותי גננות בר קיימא"
-          description="רכים מדע של, בקר מיזמי אנתרופולוגיה ב. סדר נבחרים יוצרים התפתחות של, אנא או רפואה הגרפים, בקר אם מיותר אינטרנט?"
-          underlinedWord="בר קיימא"
+          eyeCatch="גינון בר קיימא"
+          title="שירותי גננות"
+          description="עם ניסיון רב ושיטות עבודה חדשניות, אנו מציעים שירותים מקצועיים ברמה הגבוהה ביותר, המשלבים ידע, יצירתיות ודיוק על מנת להבטיח תוצאה מושלמת."
+          underlinedWord="שירותי גננות"
         />
       )}
 

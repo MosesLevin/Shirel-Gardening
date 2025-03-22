@@ -34,8 +34,8 @@ export default function Blog() {
   return (
     <div className="container mb-8">
       <SectionHeader
-        title="כתבות גינון בר קיימא"
-        underlinedWord="כתבות"
+        title="הכתבות שלנו"
+        underlinedWord="הכתבות"
         description="בות גינון בר קיימבות גינון בר קיימבות גינון בר קיימבות גינון בר קיימבות גינון בר קיימבות גינון בר קימבות גינון בר קיימבות גינון בר קיימבות גינון בר קיימבות גינון בר קיימ"
         sectionClassName="my-12"
       />

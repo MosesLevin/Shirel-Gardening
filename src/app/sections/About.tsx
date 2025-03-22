@@ -5,9 +5,9 @@ function About() {
     <section className="container font-sans mb-10">
       <div className="flex-col hebrew-text">
         <SectionHeader
-          title="אודות גינון בר-קיימא"
+          title="אודות תרבות גן"
           eyeCatch="מי אנחנו"
-          underlinedWord="גינון בר-קיימא"
+          underlinedWord="תרבות גן"
         />
         <p className="mt-8 max-w-3xl text-gray-900 text-lg p-1 mx-4">
           לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית גולר מונפרר סוברט

@@ -26,18 +26,18 @@ export default function Hero() {
       </div>
       {/* content */}
       <div className=" min-h-screen max-w-7xl h-full">
-        <div className="absolute w-9/12 md:w-2/3 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 text-center">
-          <div className="hebrew-text">
+        <div className="absolute w-9/12 md:w-2/3 -translate-x-1/2 -translate-y-1/2 top-[57%] md:top-1/2 left-1/2 text-center">
+          <div dir="rtl">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold font-sans text-white z-10">
-              <span className="">גינון </span>
-              <span className="bg-p1c1 rounded ">מקצועי </span>
-              <span className="underline-with-svg">איזור חיפה</span>
+              <span className="underline-with-svg ">גינון מקצועי</span>
+              <span className=""> עיצוב ואחזקת גינות </span>
+              <span className="bg-p1c1 rounded ">תרבות גן</span>
             </h1>
           </div>
           <p className="text-white p-1 md:mx-10 lg:mx-28 mt-10 font-sans text-xl hebrew-text">
-            בהתייחסות של, אל החול צרפתית ויקימדיה בקר. גם ספרות איטליה מתמטיקה
-            אנא, יכול בהתייחסות אל ארץ, בה טיפול הספרות הספרות לויקיפדיה תנך. את
-            שונה
+            תכנון ועיצוב גינות ארץ ישראליות. אחזקת גינות על ידי צוות מקצוענים,
+            הקמת גינות בהתאמה אישית. שיטת העבודה שלנו מדגישה את שימור יחסי
+            הגומלין בטבע
           </p>
           <div className="flex justify-center mt-10 gap-4">
             <Button
