@@ -20,7 +20,7 @@ const GallerySlider = ({
   const [selectedImage, setSelectedImage] = useState<number | null>(null)
   const [transitioning, setTransitioning] = useState(false)
 
-  // Disable scrolling when the modal is open
+  // Disable scrolling when the modal is open - Not working
   useEffect(() => {
     if (selectedImage !== null) {
       document.body.style.overflow = 'hidden'
